@@ -31,11 +31,11 @@ function startExpress(port) {
 
 	app.use(express.static(PUBLIC_DIR))
 
-	app.get("/code", function (req, res) {
+	app.get("/bundle.js", function (req, res) {
 		res.sendFile(path.join(DIST_DIR, "bundle.js"))
 	})
 
-	app.get("/", function (req, res) {
+	app.get("*", function (req, res) {
 		res.sendFile(path.join(PUBLIC_DIR, "index.html"))
 	})
 

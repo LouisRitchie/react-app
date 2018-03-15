@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
+import Home from 'containers/home'
 import About from 'containers/about'
 import Projects from 'containers/projects'
 import Timeline from 'containers/timeline'
@@ -14,9 +15,13 @@ class App extends Component {
           <h1 className="app-title">Louis Ritchie</h1>
 					<Nav />
         </header>
-				<Route path='/about' component={About} />
-				<Route path='/projects' component={Projects} />
-				<Route path='/timeline' component={Timeline} />
+				<Switch>
+					<Route path='/about' component={About} />
+					<Route path='/projects' component={Projects} />
+					<Route path='/timeline' component={Timeline} />
+					<Route exact path='/' component={Home} />
+					<Redirect from='/*' to='/' />
+				</Switch>
       </div>
     )
   }
