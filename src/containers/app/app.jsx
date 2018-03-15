@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
+import About from 'containers/about'
+import Projects from 'containers/projects'
+import Timeline from 'containers/timeline'
 import Nav from 'components/nav'
-import './app.css';
+import './app.css'
 
 class App extends Component {
   render() {
@@ -10,9 +14,12 @@ class App extends Component {
           <h1 className="app-title">Louis Ritchie</h1>
 					<Nav />
         </header>
+				<Route path='/about' component={About} />
+				<Route path='/projects' component={Projects} />
+				<Route path='/timeline' component={Timeline} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
