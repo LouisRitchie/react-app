@@ -17,6 +17,7 @@ function startWebpack() {
 			console.log('[WEBPACK] ERROR: ' + err)
 		} else {
 			console.log('[WEBPACK] Finished compiling.')
+			console.log(stats.toString())
 			// do nothing with stats, as it appears to be a big object...
 		}
 	})

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from 'components/nav'
 import './app.css';
 
 class App extends Component {
@@ -6,7 +7,8 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
-          <h1 className="app-title">Welcome to React</h1>
+          <h1 className="app-title">Louis Ritchie</h1>
+					<Nav />
         </header>
         <p className="app-intro">
           crowder.......
