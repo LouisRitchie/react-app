@@ -6,13 +6,19 @@ const config = require("./webpack.config.js")
 let PUBLIC_URL
 
 function startWebpack() {
+	console.log('[WEBPACK] Watching files.')
 	const compiler = webpack(config)
 
 	const watching = compiler.watch({
 		aggregateTimeout: 300,
 		poll: undefined
 	}, (err, stats) => {
-		// do nothing for now, as stats appears to be a big object...
+		if (err) {
+			console.log('[WEBPACK] ERROR: ' + err)
+		} else {
+			console.log('[WEBPACK] Finished compiling.')
+			// do nothing with stats, as it appears to be a big object...
+		}
 	})
 }
 
@@ -33,7 +39,7 @@ function startExpress(port) {
 	})
 
 	app.listen(port)
-	console.log('done start express.')
+	console.log('[EXPRESS] Listening on port 3000.')
 }
 
 startWebpack()
