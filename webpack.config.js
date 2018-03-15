@@ -1,11 +1,60 @@
 const path = require('path');
-const projectClientPath = path.join(__dirname, '../src')
+const projectClientPath = path.join(__dirname, 'src')
 
 module.exports = {
   entry: './src/entry.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  module: {
+    rules: [
+      {
+        test: /\.json5$/,
+        use: [ 'json5-loader' ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'isomorphic-style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              minimize: true,
+              sourceMap: false,
+              localIdentName: '[local]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: [
+					{
+						loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
+						options: {
+							babelrc: false,
+							cacheDirectory: path.resolve('node_modules/.cache/babel-loader/client'),
+							presets: [
+								// A Babel preset that can automatically determine the Babel plugins and polyfills
+								// https://github.com/babel/babel-preset-env
+
+								// Experimental ECMAScript proposals
+								// https://babeljs.io/docs/plugins/#presets-stage-x-experimental-presets-
+								'babel-preset-stage-2',
+
+								// JSX
+								// https://github.com/babel/babel/tree/master/packages/babel-preset-react
+								'babel-preset-react'
+							]
+						}
+					}
+				]
+      }
+    ]
   },
   resolve: {
     alias: {
@@ -24,3 +73,5 @@ module.exports = {
     extensions: ['.js', '.jsx']
   }
 }
+
+console.log(path.join(projectClientPath, 'containers'))
