@@ -10,9 +10,6 @@ class App extends Component {
           <h1 className="app-title">Louis Ritchie</h1>
 					<Nav />
         </header>
-        <p className="app-intro">
-          crowder.......
-        </p>
       </div>
     );
   }
