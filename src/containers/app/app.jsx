@@ -11,17 +11,22 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <header className="app-header">
-          <h1 className="app-title">Louis Ritchie</h1>
+        <header className="header">
+          <h1 className="title">Louis Ritchie</h1>
 					<Nav />
         </header>
-				<Switch>
-					<Route path='/about' component={About} />
-					<Route path='/projects' component={Projects} />
-					<Route path='/timeline' component={Timeline} />
-					<Route exact path='/' component={Home} />
-					<Redirect from='/*' to='/' />
-				</Switch>
+				<div className="container">
+					<Switch>
+						<Route path='/about' component={About} />
+						<Route path='/projects' component={Projects} />
+						<Route path='/timeline' component={Timeline} />
+						<Route exact path='/' component={Home} />
+						<Redirect from='/*' to='/' />
+					</Switch>
+				</div>
+        <header className="footer">
+					<p className='footerText'>Louis Ritchie</p>
+        </header>
       </div>
     )
   }
