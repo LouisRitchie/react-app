@@ -10,10 +10,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.json5$/,
-        use: [ 'json5-loader' ]
-      },
-      {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
       },
