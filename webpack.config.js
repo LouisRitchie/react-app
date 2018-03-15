@@ -15,19 +15,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'isomorphic-style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              minimize: true,
-              sourceMap: false,
-              localIdentName: '[local]'
-            }
-          }
-        ]
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.js?$/,
@@ -73,5 +61,3 @@ module.exports = {
     extensions: ['.js', '.jsx']
   }
 }
-
-console.log(path.join(projectClientPath, 'containers'))
