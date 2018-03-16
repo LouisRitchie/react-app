@@ -42,17 +42,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      helpers: path.join(projectClientPath, 'helpers'),
       components: path.join(projectClientPath, 'components'),
       containers: path.join(projectClientPath, 'containers'),
-      reducers: path.join(projectClientPath, 'reducers'),
-      epics: path.join(projectClientPath, 'epics'),
-      actions: path.join(projectClientPath, 'actions'),
-      lib: path.join(projectClientPath, 'lib'),
-      store: path.join(projectClientPath, 'store'),
-      styles: path.join(projectClientPath, 'styles'),
-      selectors: path.join(projectClientPath, 'selectors'),
-      static: path.join(__dirname, 'static')
+      static: path.join(__dirname, 'static'),
+      src: projectClientPath,
+      styles: path.join(projectClientPath, 'styles')
     },
     extensions: ['.js', '.jsx']
   }
