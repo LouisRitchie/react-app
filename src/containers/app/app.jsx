@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
-import Nav from 'components/nav'
+import Header from 'components/header'
 import routes from 'src/routes.js'
 import './app.css'
 
 class App extends Component {
   render() {
+		console.log('rendering app')
     return (
       <div className="app">
-        <header className="header">
-          <h1 className="title">Louis Ritchie</h1>
-					<Nav routes={routes} />
-        </header>
+				<Header routes={routes} />
 				<div className="container">
 					<Switch>
             {routes.map(route => (

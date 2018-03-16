@@ -1,3 +1,25 @@
+.header {
+  height: 55px;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.title {
+  font-size: 1.3em;
+}
+
+.header {
+	padding-left: 64px;
+	padding-right: 32px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  color: white;
+  background-color: #222;
+}
+
 .nav {
   height: 100%;
   font-size: 0.9em;
@@ -34,6 +56,19 @@
 }
 
 @media(max-width: 650px) {
+  .header {
+    height: 90px;
+    flex-flow: column;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .title {
+    height: 50%;
+  }
+
   .nav {
     height: 50%;
     width: 100%;
