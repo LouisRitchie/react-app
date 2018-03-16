@@ -5,7 +5,7 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
-				Timeline Container.
+        Timeline Container.
       </div>
     )
   }

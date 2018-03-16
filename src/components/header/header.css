@@ -8,14 +8,14 @@
 }
 
 .header {
-	padding-left: 64px;
-	padding-right: 32px;
+  padding-left: 64px;
+  padding-right: 32px;
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
   background-color: #222;
 }
@@ -23,10 +23,10 @@
 .nav {
   height: 100%;
   font-size: 0.9em;
-	font-weight: bold;
-	margin: auto 0;
-	display: flex;
-	justify-content: space-between;
+  font-weight: bold;
+  margin: auto 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navItem {
