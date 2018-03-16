@@ -4,7 +4,7 @@
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .footer {
@@ -12,6 +12,7 @@
 	bottom: 0;
   height: 40px;
 	width: calc(100% - 96px);
+  font-size: 0.9em;
 }
 
 .header,
@@ -30,7 +31,25 @@
   background-color: #222;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media(max-width: 650px) {
+  .header {
+    height: 90px;
+    flex-flow: column;
+  }
+
+  .footer {
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header,
+  .container,
+  .footer {
+    padding: 0;
+  }
+
+  .title {
+    height: 50%;
+  }
 }
