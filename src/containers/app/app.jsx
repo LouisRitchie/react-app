@@ -3,6 +3,7 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import Header from 'components/header'
 import Footer from 'components/footer'
 import routes from 'src/routes.js'
+import TransitionContainer from 'containers/transitionContainer'
 import './app.css'
 
 class App extends Component {
@@ -21,8 +22,17 @@ class App extends Component {
 
         <div className={`container ${lightsOn ? 'lightsOn' : ''}`}>
           <Switch>
-            {routes.map(({path, component: Component}) => (
-              <Route path={path} render={props => <Component {...props} hitLightSwitch={this._hitLightSwitch} />} />
+            {routes.map(({component, name, path}) => (
+              <Route
+                path={path}
+                render={() => (
+                  <TransitionContainer
+                    hitLightSwitch={this._hitLightSwitch}
+                    component={component}
+                    routeName={name}
+                  />
+                )}
+              />
             ))}
             <Redirect from='/*' to='/' />
           </Switch>
