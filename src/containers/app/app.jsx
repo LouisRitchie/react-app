@@ -47,7 +47,7 @@ class App extends Component {
 					</Switch>
 				</div>
         <header className="footer">
-					<p className='footerText'>Louis Ritchie</p>
+					<p className='footerText'>Websit of Louis Ritchie</p>
         </header>
       </div>
     )
