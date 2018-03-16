@@ -7,20 +7,42 @@ import Timeline from 'containers/timeline'
 import Nav from 'components/nav'
 import './app.css'
 
+const routes = [
+  {
+    path: '/about',
+    component: About,
+    name: 'About'
+  },
+  {
+    path: '/projects',
+    component: Projects,
+    name: 'Projects'
+  },
+  {
+    path: '/timeline',
+    component: Timeline,
+    name: 'Timeline'
+  },
+  {
+    path: '/',
+    component: Home,
+    name: 'Home'
+  }
+]
+
 class App extends Component {
   render() {
     return (
       <div className="app">
         <header className="header">
           <h1 className="title">Louis Ritchie</h1>
-					<Nav />
+					<Nav routes={routes} />
         </header>
 				<div className="container">
 					<Switch>
-						<Route path='/about' component={About} />
-						<Route path='/projects' component={Projects} />
-						<Route path='/timeline' component={Timeline} />
-						<Route exact path='/' component={Home} />
+            {routes.map(route => (
+              <Route path={route.path} component={route.component} />
+            ))}
 						<Redirect from='/*' to='/' />
 					</Switch>
 				</div>

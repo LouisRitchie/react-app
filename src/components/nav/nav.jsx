@@ -6,9 +6,13 @@ class Nav extends Component {
   render() {
     return (
       <div className="nav">
-				<Link to='/about' className="navItem">About</Link>
-				<Link to='/projects' className="navItem">Projects</Link>
-				<Link to='/timeline' className="navItem">Timeline</Link>
+        {this.props.routes.slice(0).reverse().map(route => (
+          <Link
+            to={route.path}
+            className={`navItem ${window.location.pathname === route.path ? 'selected' : ''}`}>
+            {route.name}
+          </Link>
+        ))}
       </div>
     )
   }

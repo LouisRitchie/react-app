@@ -9,6 +9,18 @@
 
 .navItem {
 	margin: 0 10px 0 0;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.navItem:visited {
+  color: white;
+}
+
+.navItem:hover,
+.selected {
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
