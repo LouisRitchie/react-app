@@ -10,8 +10,12 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.svg$/,
+        use: ['svg-react-loader']
+      },
+      {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.jsx?$/,
@@ -44,7 +48,7 @@ module.exports = {
     alias: {
       components: path.join(projectClientPath, 'components'),
       containers: path.join(projectClientPath, 'containers'),
-      static: path.join(__dirname, 'static'),
+      static: path.join(projectClientPath, 'static'),
       src: projectClientPath,
       styles: path.join(projectClientPath, 'styles')
     },
