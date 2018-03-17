@@ -19,7 +19,7 @@ import WorkIcon from './workIcon.svg'
 
 export default {
   cpp: <CppIcon />,
-  css: <CssIcon />,
+  css: <CssIcon title='css' />,
   github: <GithubIcon />,
   git: <GitIcon />,
   index: <IndexIcon />,

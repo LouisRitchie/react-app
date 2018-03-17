@@ -49,6 +49,7 @@ module.exports = {
       components: path.join(projectClientPath, 'components'),
       containers: path.join(projectClientPath, 'containers'),
       static: path.join(projectClientPath, 'static'),
+      lib: path.join(__dirname, 'lib'),
       src: projectClientPath,
       styles: path.join(projectClientPath, 'styles')
     },

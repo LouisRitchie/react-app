@@ -1,7 +1,7 @@
 .footer {
+  position: relative;
   padding-left: 64px;
   padding-right: 32px;
-  position: absolute;
   bottom: 0;
   height: 40px;
   width: calc(100% - 96px);
@@ -11,6 +11,7 @@
   align-items: center;
   color: white;
   background-color: #222;
+  z-index: 1;
 }
 
 @media(max-width: 650px) {
