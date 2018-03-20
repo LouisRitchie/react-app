@@ -8,17 +8,19 @@ import 'rxjs/add/operator/sample'
 import 'rxjs/add/operator/takeUntil'
 import './styles.css'
 
+const IMAGE_HEIGHT = 500 // set image size here. Must be consistent for all home container images
+
 class SlidingPhoto extends Component {
-  /*  the initial state has the image at zero opacity and at start position, so that
-   *  even if image is 1st on page, it will still slide in to view on mount.
-   */
   static propTypes = {
     slideDistance: PropTypes.number.isRequired,
-    fromTop: PropTypes.number.isRequired,
-    slideTo: PropTypes.number.isRequired,
+    fromTopOfContainer: PropTypes.number.isRequired,
+    slideToAbsoluteY: PropTypes.number.isRequired,
     slug: PropTypes.string.isRequired
   }
 
+  /*  the initial state has the image at zero opacity and at start position, so that
+   *  even if image is 1st on page, it will still slide in to view on mount.
+   */
   state = {
     coefficient: 1
   }
@@ -36,7 +38,7 @@ class SlidingPhoto extends Component {
     ))
   }
 
-  componentDidMount() {
+  componentWillReceiveProps() {
     this.setState({ coefficient: this._getCoefficient(document.documentElement.clientHeight) })
   }
 
@@ -50,8 +52,8 @@ class SlidingPhoto extends Component {
      *  0 < coefficient < 1: image is transitioning
      *  coefficient === 1: image at zero opacity and resting at start position.
      */
-    let coefficient = (this.props.slideTo + this.props.slideDistance - pageY) / this.props.slideDistance
-    
+    let coefficient = (this.props.fromTopOfContainer + this.props.slideToAbsoluteY + this.props.slideDistance - pageY) / this.props.slideDistance
+
     if (coefficient < 0) {
       return 0
     }
@@ -64,9 +66,20 @@ class SlidingPhoto extends Component {
   }
 
   render() {
+    const {
+      props: { fromTopOfContainer, slug },
+      state: { coefficient }
+    } = this
+
     return (
       <div className='slidingPhotoContainer'>
-        <img className='slidingPhoto' src={require(`../../static/images/${this.props.slug}.png`)} style={{top: this.props.fromTop + (this.state.coefficient * 500), opacity: 1 - this.state.coefficient}} />
+        <img
+          className='slidingPhoto'
+          src={require(`../../static/images/${slug}.png`)}
+          style={{
+            top: fromTopOfContainer + (coefficient * IMAGE_HEIGHT),
+            opacity: 1 - coefficient
+          }} />
       </div>
     )
   }

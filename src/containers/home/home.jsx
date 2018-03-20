@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div className='home'>
         {items.map((item, i) => (
-          <ValueProp {...item} index={i} />
+          <ValueProp {...item} index={i} key={item.slug} />
         ))}
       </div>
     )

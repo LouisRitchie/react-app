@@ -12,11 +12,27 @@ class ValueProp extends Component {
     slug: PropTypes.string.isRequired
   }
 
+  state = {
+    refString: `valueProp${this.props.index}`,
+    positionY: void 0 // passed to SlidingPhoto; unknown before mount.
+  }
+
+  componentDidMount() {
+    this.setState({
+      positionY: this.refs[this.state.refString].getBoundingClientRect().top
+    })
+  }
+
   render() {
-    const { description, index, heading, subheading, slug } = this.props
+    const {
+      props: { description, index, heading, subheading, slug },
+      state: { positionY, refString }
+    } = this
+
+    console.log(positionY)
 
     return (
-      <section className={`valueProp ${index % 2 !== 0 ? 'reverse' : ''}`}>
+      <section ref={refString} className={`valueProp ${index % 2 !== 0 ? 'reverse' : ''}`}>
         <div className='textContainer'>
           <div className='text'>
             <h1>{heading}</h1>
@@ -24,7 +40,11 @@ class ValueProp extends Component {
             <p>{description}</p>
           </div>
         </div>
-        <SlidingPhoto slideDistance={400} fromTop={120} slideTo={120 + (650 * index)} slug={slug} />
+        <SlidingPhoto
+          slideDistance={400}
+          fromTopOfContainer={120}
+          slideToAbsoluteY={positionY}
+          slug={slug} />
       </section>
     )
   }
