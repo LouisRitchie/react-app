@@ -6,11 +6,16 @@
 }
 
 .slidingPhotoContainer {
+  position: relative;
   width: 40vw;
 }
 
 @media(max-width: 650px) {
   .slidingPhoto {
     width: 90vw;
+  }
+
+  .slidingPhotoContainer {
+    margin-top: -80px;
   }
 }

@@ -3,7 +3,15 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  height: 650px;
+  height: 550px;
+}
+
+.valueProp:nth-child(even) {
+  background: #eee;
+}
+
+.valueProp:nth-child(odd) {
+  background: lightgreen;
 }
 
 .reverse {
@@ -17,13 +25,15 @@
 }
 
 .text {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   max-width: 40vw;
 }
 
 @media(max-width: 650px) {
   .valueProp {
     flex-flow: column nowrap;
+    justify-content: flex-start;
+    height: 800px;
   }
 
   .text {

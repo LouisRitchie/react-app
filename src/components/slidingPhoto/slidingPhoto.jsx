@@ -14,7 +14,6 @@ class SlidingPhoto extends Component {
   static propTypes = {
     slideDistance: PropTypes.number.isRequired,
     fromTopOfContainer: PropTypes.number.isRequired,
-    slideToAbsoluteY: PropTypes.number.isRequired,
     slug: PropTypes.string.isRequired
   }
 
@@ -22,7 +21,8 @@ class SlidingPhoto extends Component {
    *  even if image is 1st on page, it will still slide in to view on mount.
    */
   state = {
-    coefficient: 1
+    coefficient: 1,
+    refString: `valueProp${this.props.index}`
   }
 
   componentWillMount() {
@@ -38,7 +38,7 @@ class SlidingPhoto extends Component {
     ))
   }
 
-  componentWillReceiveProps() {
+  componentDidMount() {
     this.setState({ coefficient: this._getCoefficient(document.documentElement.clientHeight) })
   }
 
@@ -52,7 +52,11 @@ class SlidingPhoto extends Component {
      *  0 < coefficient < 1: image is transitioning
      *  coefficient === 1: image at zero opacity and resting at start position.
      */
-    let coefficient = (this.props.fromTopOfContainer + this.props.slideToAbsoluteY + this.props.slideDistance - pageY) / this.props.slideDistance
+    let coefficient = (
+      this.props.fromTopOfContainer +
+      this.refs[this.state.refString].getBoundingClientRect().top +
+      this.props.slideDistance - pageY
+    ) / this.props.slideDistance
 
     if (coefficient < 0) {
       return 0
@@ -68,11 +72,11 @@ class SlidingPhoto extends Component {
   render() {
     const {
       props: { fromTopOfContainer, slug },
-      state: { coefficient }
+      state: { coefficient, refString }
     } = this
 
     return (
-      <div className='slidingPhotoContainer'>
+      <div ref={refString} className='slidingPhotoContainer'>
         <img
           className='slidingPhoto'
           src={require(`../../static/images/${slug}.png`)}
