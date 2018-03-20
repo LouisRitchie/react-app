@@ -20,3 +20,17 @@
   margin-bottom: 70px;
   max-width: 40vw;
 }
+
+@media(max-width: 650px) {
+  .valueProp {
+    flex-flow: column nowrap;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .textContainer {
+    height: 300px;
+  }
+}

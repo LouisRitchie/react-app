@@ -8,3 +8,9 @@
 .slidingPhotoContainer {
   width: 40vw;
 }
+
+@media(max-width: 650px) {
+  .slidingPhoto {
+    width: 90vw;
+  }
+}
