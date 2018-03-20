@@ -52,10 +52,10 @@ class SlidingPhoto extends Component {
      *  0 < coefficient < 1: image is transitioning
      *  coefficient === 1: image at zero opacity and resting at start position.
      */
-    let coefficient = (
-      this.props.fromTopOfContainer +
-      this.refs[this.state.refString].getBoundingClientRect().top +
-      this.props.slideDistance - pageY
+
+    const coefficient = (
+      this.props.fromTopOfContainer - document.documentElement.clientHeight + this.refs[this.state.refString].getBoundingClientRect().top +
+      this.props.slideDistance
     ) / this.props.slideDistance
 
     if (coefficient < 0) {

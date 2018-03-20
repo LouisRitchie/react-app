@@ -4,6 +4,7 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   height: 550px;
+  max-width: 1400px;
 }
 
 .valueProp:nth-child(even) {
@@ -26,14 +27,14 @@
 
 .text {
   margin-bottom: 30px;
-  max-width: 40vw;
+  max-width: 550px;
 }
 
 @media(max-width: 650px) {
   .valueProp {
     flex-flow: column nowrap;
     justify-content: flex-start;
-    height: 800px;
+    height: 600px;
   }
 
   .text {
