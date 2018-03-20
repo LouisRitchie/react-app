@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './header.css'
+import './styles.css'
 import { Link } from 'react-router-dom'
 import routes from 'src/routes.js'
 

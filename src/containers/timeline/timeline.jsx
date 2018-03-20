@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { VerticalTimeline, VerticalTimelineElement }  from 'lib/react-vertical-timeline-component';
 import 'lib/react-vertical-timeline-component/style.min.css';
-import './timeline.css'
+import './styles.css'
 import icons from 'static/icons'
 
 const timelineItems = [
