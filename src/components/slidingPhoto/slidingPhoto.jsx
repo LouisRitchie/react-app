@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { scroll$ } from 'lib/observables.js'
 import { interval } from 'rxjs/observable/interval'
 import { take } from 'rxjs/operators/take'
@@ -11,6 +12,13 @@ class SlidingPhoto extends Component {
   /*  the initial state has the image at zero opacity and at start position, so that
    *  even if image is 1st on page, it will still slide in to view on mount.
    */
+  static propTypes = {
+    slideDistance: PropTypes.number.isRequired,
+    fromTop: PropTypes.number.isRequired,
+    slideTo: PropTypes.number.isRequired,
+    slug: PropTypes.string.isRequired
+  }
+
   state = {
     coefficient: 1
   }

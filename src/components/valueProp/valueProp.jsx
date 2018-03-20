@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import SlidingPhoto from 'components/slidingPhoto'
 import './styles.css'
 
 class ValueProp extends Component {
+  static propTypes = {
+    description: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
+    heading: PropTypes.string.isRequired,
+    subheading: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired
+  }
+
   render() {
     const { description, index, heading, subheading, slug } = this.props
 
