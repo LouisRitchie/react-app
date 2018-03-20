@@ -9,7 +9,7 @@ import './styles.css'
 
 class SlidingPhoto extends Component {
   /*  the initial state has the image at zero opacity and at start position, so that
-   *  even if image is 1st on page, it will still slide in to view
+   *  even if image is 1st on page, it will still slide in to view on mount.
    */
   state = {
     coefficient: 1
@@ -57,7 +57,7 @@ class SlidingPhoto extends Component {
 
   render() {
     return (
-      <img className='photo' src={this.props.image} style={{top: this.props.slideTo + (this.state.coefficient * 500), opacity: 1 - this.state.coefficient}} />
+      <img className='photo' src={import(`../../static/images/${this.props.image}.png`)} style={{top: this.props.slideTo + (this.state.coefficient * 500), opacity: 1 - this.state.coefficient}} />
     )
   }
 }
