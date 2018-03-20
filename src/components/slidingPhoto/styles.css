@@ -1,5 +1,10 @@
-.photo {
+.slidingPhoto {
   position: absolute;
-  transition: top 0.6s ease-out, opacity 0.6s ease-out;
-  height: 500px;
+  transition: top 1s ease-out, opacity 1s ease-out;
+  width: 40vw;
+  max-height: 600px;
+}
+
+.slidingPhotoContainer {
+  width: 40vw;
 }

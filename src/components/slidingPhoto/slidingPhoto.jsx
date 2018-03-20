@@ -57,7 +57,9 @@ class SlidingPhoto extends Component {
 
   render() {
     return (
-      <img className='photo' src={import(`../../static/images/${this.props.image}.png`)} style={{top: this.props.slideTo + (this.state.coefficient * 500), opacity: 1 - this.state.coefficient}} />
+      <div className='slidingPhotoContainer'>
+        <img className='slidingPhoto' src={require(`../../static/images/${this.props.slug}.png`)} style={{top: this.props.fromTop + (this.state.coefficient * 500), opacity: 1 - this.state.coefficient}} />
+      </div>
     )
   }
 }

@@ -1,0 +1,22 @@
+.valueProp {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  height: 650px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.textContainer {
+  display: flex;
+  flex-flow: column nowrap;   
+  justify-content: center;
+}
+
+.text {
+  margin-bottom: 70px;
+  max-width: 40vw;
+}

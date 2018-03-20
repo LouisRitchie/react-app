@@ -2,3 +2,16 @@
   font-size: 1.1em;
   height: 5000px;
 }
+
+.section {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.text {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
