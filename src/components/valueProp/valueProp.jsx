@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import SlidingPhoto from 'components/slidingPhoto'
+import SlidingBox from 'components/slidingBox'
 import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/take'
@@ -53,7 +53,7 @@ class ValueProp extends Component {
             <p>{description}</p>
           </div>
         </div>
-        <SlidingPhoto
+        <SlidingBox
           slideDistance={isMobile ? 100 : 400}
           fromTopOfContainer={isMobile ? 0 : 100}
           index={index}

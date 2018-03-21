@@ -10,7 +10,7 @@ import './styles.css'
 
 const IMAGE_HEIGHT = 500 // set image size here. Must be consistent for all home container images
 
-class SlidingPhoto extends Component {
+class SlidingBox extends Component {
   static propTypes = {
     slideDistance: PropTypes.number.isRequired,
     fromTopOfContainer: PropTypes.number.isRequired,
@@ -22,8 +22,7 @@ class SlidingPhoto extends Component {
    */
   state = {
     coefficient: 1,
-    refString: `valueProp${this.props.index}`,
-    imageHeight: 0
+    refString: `valueProp${this.props.index}`
   }
 
   componentWillMount() {
@@ -40,17 +39,7 @@ class SlidingPhoto extends Component {
   }
 
   componentDidMount() {
-    let imageHeight
-    if (document.documentElement.clientWidth * 0.4 * 0.565 > 550) {
-      imageHeight = 550
-    } else {
-      imageHeight = document.documentElement.clientWidth * 0.4 * 0.5625
-    }
-
-    this.setState({
-      imageHeight,
-      coefficient: this._getCoefficient(document.documentElement.clientHeight),
-    })
+    this.setState({ coefficient: this._getCoefficient(document.documentElement.clientHeight) })
   }
 
   componentWillUnmount() {
@@ -83,32 +72,25 @@ class SlidingPhoto extends Component {
   render() {
     const {
       props: { fromTopOfContainer, slug, photoDescription },
-      state: { coefficient, refString, imageHeight }
+      state: { coefficient, refString }
     } = this
 
-    console.log(imageHeight)
-
     return (
-      <div ref={refString} className='slidingPhotoContainer'>
-        <img
-          ref={`${refString}Img`}
-          className='slidingPhoto'
-          src={require(`../../static/images/${slug}.png`)}
+      <div ref={refString} className='slidingBoxContainer'>
+        <div
+          className='box'
           style={{
             top: fromTopOfContainer + (coefficient * IMAGE_HEIGHT),
-            opacity: 1 - coefficient
-          }} />
-        <p
-          className={'photoSubtext'}
-          style={{
-            height: imageHeight,  
-            top: fromTopOfContainer + imageHeight + (coefficient * IMAGE_HEIGHT),
-            opacity: 1 - coefficient
-          }}
-        >{photoDescription}</p>
+            opacity: 1 - coefficient * 2
+          }}>
+          <img
+            className='photo'
+            src={require(`../../static/images/${slug}.png`)} />
+          <p className='boxText'>{photoDescription}</p>
+        </div>
       </div>
     )
   }
 }
 
-export default SlidingPhoto
+export default SlidingBox
