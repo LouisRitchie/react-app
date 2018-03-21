@@ -4,13 +4,12 @@ import CppIcon from './cpp.svg'
 import CssIcon from './css.svg'
 import GithubIcon from './github.svg'
 import GitIcon from './git.svg'
-import IndexIcon from './index.js'
 import JavascriptIcon from './javascript.svg'
 import JavaIcon from './java.svg'
 import LogoIcon from './logo.svg'
 import NginxIcon from './nginx.svg'
 import NodeIcon from './node.svg'
-import ReactIcon from './react.svg'
+import ReactIcon from './reactIcon.svg'
 import SchoolIconIcon from './schoolIcon.svg'
 import TwitterIcon from './twitter.svg'
 import UbuntuIcon from './ubuntu.svg'
@@ -22,13 +21,12 @@ export default {
   css: <CssIcon title='css' />,
   github: <GithubIcon />,
   git: <GitIcon />,
-  index: <IndexIcon />,
   javascript: <JavascriptIcon />,
   java: <JavaIcon />,
   logo: <LogoIcon />,
   nginx: <NginxIcon />,
   node: <NodeIcon />,
-  react: <ReactIcon />,
+  reactIcon: <ReactIcon />,
   schoolIcon: <SchoolIconIcon />,
   twitter: <TwitterIcon />,
   ubuntu: <UbuntuIcon />,

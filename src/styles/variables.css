@@ -1,0 +1,10 @@
+body {
+  --navy: #062035;
+  --margin-left: 64px;
+}
+// screens smaller than 650px
+@media(max-width: 650px) {
+  body {
+    --margin-left: 16px;
+  }
+}

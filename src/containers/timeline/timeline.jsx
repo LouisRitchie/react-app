@@ -19,7 +19,7 @@ const timelineItems = [
     description: 'Global Game Jam was a game development competition that I organized.',
     start: 'January 2017',
     end: 'March 2017',
-    discipline: 'css'
+    discipline: 'git'
   },
   {
     title: 'Global Game Jam',
@@ -27,7 +27,7 @@ const timelineItems = [
     description: 'Global Game Jam was a game development competition that I organized.',
     start: 'January 2017',
     end: 'March 2017',
-    discipline: 'css'
+    discipline: 'vim'
   },
   {
     title: 'Global Game Jam',
@@ -35,7 +35,7 @@ const timelineItems = [
     description: 'Global Game Jam was a game development competition that I organized.',
     start: 'January 2017',
     end: 'March 2017',
-    discipline: 'css'
+    discipline: 'javascript'
   },
   {
     title: 'Global Game Jam',
@@ -43,7 +43,7 @@ const timelineItems = [
     description: 'Global Game Jam was a game development competition that I organized.',
     start: 'January 2017',
     end: 'March 2017',
-    discipline: 'css'
+    discipline: 'reactIcon'
   }
 ]
 
