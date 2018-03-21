@@ -1,7 +1,8 @@
 .slidingBoxContainer {
   position: relative;
   max-width: 550px;
-  width: 40vw;
+  width: var(--sliding-box-container-width);
+  margin: var(--sliding-box-container-margin);
 }
 
 .box {
@@ -25,10 +26,6 @@
 
 @media(max-width: 650px) {
   .box {
-    width: 90vw;
-  }
-
-  .slidingBoxContainer {
-    margin-top: -80px;
+    width: var(--sliding-box-container-width);
   }
 }

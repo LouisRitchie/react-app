@@ -26,12 +26,14 @@
 
 .valueProp .textContainer {
   text-align: right;
-  margin-right: 45px;
+  margin-right: var(--value-prop-text-container-margin-centerside);
+  margin-left: var(--value-prop-text-container-margin-edgeside);
 }
 
 .reverse .textContainer {
   text-align: left;
-  margin-left: 45px;
+  margin-left: var(--value-prop-text-container-margin-centerside);
+  margin-right: var(--value-prop-text-container-margin-edgeside);
   margin-right: 0;
 }
 
@@ -42,7 +44,7 @@
 }
 
 .text {
-  margin-bottom: 30px;
+  margin-bottom: var(--value-prop-text-margin-bottom);
   max-width: 550px;
 }
 
@@ -50,14 +52,20 @@
   .valueProp {
     flex-flow: column nowrap;
     justify-content: flex-start;
-    height: 600px;
+    height: auto;
+    padding: 40px 0 calc(var(--sliding-box-container-height) + 60px);
+  }
+
+  .valueProp:last-child {
+    padding-bottom: 400px;
   }
 
   .text {
     max-width: 100%;
   }
 
-  .textContainer {
-    height: 300px;
+  .valueProp .textContainer {
+    height: auto;
+    text-align: center;
   }
 }

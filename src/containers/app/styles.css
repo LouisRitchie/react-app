@@ -3,7 +3,7 @@
   padding-right: 32px;
   opacity: 0;
   transition: opacity 0s;
-  margin-top: 55px;
+  margin-top: var(--margin-top);
 }
 
 .lightsOn {

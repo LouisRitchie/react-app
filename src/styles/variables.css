@@ -1,10 +1,49 @@
 body {
   --navy: #062035;
   --margin-left: 64px;
+  --margin-top: 55px;
+
+  --p-text-align: initial;
+
+  --splash-top: 40px;
+  --splash-margin-bottom: 0;
+  
+  --nav-item-line-height: 55px;
+
+  --value-prop-text-container-margin-centerside: 45px;
+  --value-prop-text-container-margin-edgeside: 0;
+  --value-prop-text-margin-bottom: 30px;
+
+  --sliding-box-container-width: 40vw;
+  --sliding-box-container-margin: initial;
 }
-// screens smaller than 650px
+
 @media(max-width: 650px) {
   body {
     --margin-left: 16px;
+    --margin-top: 90px;
+
+    --p-text-align: justify;
+
+    --splash-top: 16px;
+    --splash-margin-bottom: 40px;
+    --splash-heading-text-align: center;
+
+    --nav-item-line-height: 38px;
+
+    --value-prop-text-container-margin-centerside: 10px;
+    --value-prop-text-container-margin-edgeside: 10px;
+    --value-prop-text-margin-bottom: 0;
+
+    --sliding-box-container-width: 420px;
+    --sliding-box-container-height: 236px;
+    --sliding-box-container-margin: 0 auto;
+  }
+}
+
+@media(max-width: 420px) {
+  body {
+    --sliding-box-container-width: 320px;
+    --sliding-box-container-height: 180px;
   }
 }

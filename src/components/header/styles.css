@@ -44,7 +44,7 @@
   text-align: center;
   outline: none;
   width: 100px;
-  line-height: 55px;
+  line-height: var(--nav-item-line-height);
   vertical-align: middle;
   opacity: 0.85;
   border-bottom: 3px solid #062035;
@@ -87,6 +87,5 @@
 
   .navItem {
     width: 25%;
-    line-height: 20px;
   }
 }

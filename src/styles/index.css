@@ -27,6 +27,7 @@ h3 {
 
 p {
   font-size: 16px;
+  text-align: var(--p-text-align);
 }
 
 small {

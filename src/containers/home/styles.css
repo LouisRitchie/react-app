@@ -9,6 +9,7 @@
   margin: 0 auto;
   position: relative;
   background: linear-gradient(180deg, white, white, white, var(--navy));
+  margin-bottom: var(--splash-margin-bottom);
 }
 
 .splash > section {
@@ -43,7 +44,7 @@
 
 .splashHeading {
   position: absolute;
-  top: 40px;
+  top: var(--splash-top);
 }
 
 .splashHeading > h1,
@@ -79,4 +80,15 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+}
+
+@media(max-width: 650px) {
+  .splash > section {
+    width: 33.3333333333%;
+  }
+
+  .splash > section:nth-child(3),
+  .splash > section:nth-child(5) {
+    display: none;
+  }
 }
