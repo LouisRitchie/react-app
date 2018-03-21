@@ -22,7 +22,8 @@ class SlidingPhoto extends Component {
    */
   state = {
     coefficient: 1,
-    refString: `valueProp${this.props.index}`
+    refString: `valueProp${this.props.index}`,
+    imageHeight: 0
   }
 
   componentWillMount() {
@@ -39,7 +40,17 @@ class SlidingPhoto extends Component {
   }
 
   componentDidMount() {
-    this.setState({ coefficient: this._getCoefficient(document.documentElement.clientHeight) })
+    let imageHeight
+    if (document.documentElement.clientWidth * 0.4 * 0.565 > 550) {
+      imageHeight = 550
+    } else {
+      imageHeight = document.documentElement.clientWidth * 0.4 * 0.5625
+    }
+
+    this.setState({
+      imageHeight,
+      coefficient: this._getCoefficient(document.documentElement.clientHeight),
+    })
   }
 
   componentWillUnmount() {
@@ -71,19 +82,30 @@ class SlidingPhoto extends Component {
 
   render() {
     const {
-      props: { fromTopOfContainer, slug },
-      state: { coefficient, refString }
+      props: { fromTopOfContainer, slug, photoDescription },
+      state: { coefficient, refString, imageHeight }
     } = this
+
+    console.log(imageHeight)
 
     return (
       <div ref={refString} className='slidingPhotoContainer'>
         <img
+          ref={`${refString}Img`}
           className='slidingPhoto'
           src={require(`../../static/images/${slug}.png`)}
           style={{
             top: fromTopOfContainer + (coefficient * IMAGE_HEIGHT),
             opacity: 1 - coefficient
           }} />
+        <p
+          className={'photoSubtext'}
+          style={{
+            height: imageHeight,  
+            top: fromTopOfContainer + imageHeight + (coefficient * IMAGE_HEIGHT),
+            opacity: 1 - coefficient
+          }}
+        >{photoDescription}</p>
       </div>
     )
   }

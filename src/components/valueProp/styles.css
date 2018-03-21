@@ -5,6 +5,7 @@
   justify-content: space-around;
   height: 550px;
   max-width: 1400px;
+  margin: 0 auto;
 }
 
 .valueProp:nth-child(even) {

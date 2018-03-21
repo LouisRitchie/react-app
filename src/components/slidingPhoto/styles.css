@@ -1,13 +1,22 @@
+.slidingPhotoContainer {
+  position: relative;
+  max-width: 550px;
+  width: 40vw;
+}
+
 .slidingPhoto {
   position: absolute;
   transition: top 1s ease-out, opacity 1s ease-out;
-  width: 550px;
+  max-width: 100%;
   max-height: 600px;
 }
 
-.slidingPhotoContainer {
-  position: relative;
-  width: 550px;
+.photoSubtext {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  transition: top 1s ease-out, opacity 1s ease-out;
 }
 
 @media(max-width: 650px) {

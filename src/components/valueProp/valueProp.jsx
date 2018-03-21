@@ -41,7 +41,7 @@ class ValueProp extends Component {
   }
 
   render() {
-    const { description, index, heading, subheading, slug } = this.props
+    const { description, index, heading, photoDescription, subheading, slug } = this.props
     const { isMobile } = this.state
 
     return (
@@ -57,6 +57,7 @@ class ValueProp extends Component {
           slideDistance={isMobile ? 100 : 400}
           fromTopOfContainer={isMobile ? 0 : 100}
           index={index}
+          photoDescription={photoDescription}
           slug={slug} />
       </section>
     )
