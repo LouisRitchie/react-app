@@ -8,7 +8,7 @@
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  background: #062035;
+  background: linear-gradient(180deg, white, white, white, #062035);
 }
 
 .splash > section {
@@ -22,6 +22,7 @@
 
 .splash > section:nth-child(1) {
   background-image: url('../../static/images/grin.jpg');
+  opacity: 0.9;
 }
 
 .splash > section:nth-child(2) {
@@ -29,12 +30,12 @@
 }
 
 .splash > section:nth-child(3) {
-  background-image: url('../../static/images/myface.jpg');
-  opacity: 1;
+  background-image: url('../../static/images/uvgd.png');
 }
 
 .splash > section:nth-child(4) {
-  background-image: url('../../static/images/uvgd.png');
+  background-image: url('../../static/images/myface.jpg');
+  opacity: 1;
 }
 
 .splash > section:nth-child(5) {

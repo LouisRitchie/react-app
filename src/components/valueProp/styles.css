@@ -8,12 +8,12 @@
   margin: 0 auto;
 }
 
-.valueProp:nth-child(4n+3) {
-  background: linear-gradient(120deg, #e6edff, #ece3ff);
+.valueProp:nth-child(4n+1) {
+  background: linear-gradient(180deg, white, #e1e9ff, #dce1ff);
 }
 
-.valueProp:nth-child(4n+1) {
-  background: linear-gradient(60deg, #e1e9ff, #dce1ff);
+.valueProp:nth-child(4n+3) {
+  background: linear-gradient(180deg, #e6edff, #ece3ff, white);
 }
 
 .valueProp:last-child {
