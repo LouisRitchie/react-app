@@ -8,12 +8,16 @@
   margin: 0 auto;
 }
 
-.valueProp:nth-child(4n+2) {
+.valueProp:nth-child(4n+3) {
   background: linear-gradient(120deg, #e6edff, #ece3ff);
 }
 
-.valueProp:nth-child(4n+0) {
+.valueProp:nth-child(4n+1) {
   background: linear-gradient(60deg, #e1e9ff, #dce1ff);
+}
+
+.valueProp:last-child {
+  padding-bottom: 150px;
 }
 
 .reverse {

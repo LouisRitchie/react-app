@@ -1,6 +1,5 @@
 .home {
   font-size: 1.1em;
-  height: 5000px;
   width: 100%;
 }
 
@@ -8,28 +7,63 @@
   height: 70vh;
   max-width: 1400px;
   margin: 0 auto;
-  padding-top: 50px;
+  position: relative;
+  background: #062035;
 }
 
-.splash > h1,
-.splash > h2,
-.splash > h3 {
+.splash > section {
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.splash > section:nth-child(1) {
+  background-image: url('../../static/images/grin.jpg');
+}
+
+.splash > section:nth-child(2) {
+  background-image: url('../../static/images/domi.jpg');
+}
+
+.splash > section:nth-child(3) {
+  background-image: url('../../static/images/myface.jpg');
+  opacity: 1;
+}
+
+.splash > section:nth-child(4) {
+  background-image: url('../../static/images/uvgd.png');
+}
+
+.splash > section:nth-child(5) {
+  background-image: url('../../static/images/drum.png');
+}
+
+.splashHeading {
+  position: absolute;
+  top: 40px;
+}
+
+.splashHeading > h1,
+.splashHeading > h2,
+.splashHeading > h3 {
   margin-left: 70px;
+  text-shadow: 2px 0 5px white, -2px 0 5px white, 0 -2px 5px white, 0 2px 5px white;
 }
 
-.splash > h1 {
+.splashHeading > h1 {
   font-size: 64px;
+  text-shadow: 0 1px 3px white, 0 -1px 3px white, -1px 0 3px white, 1px 0 3px white;
 }
 
-.splash > h2 {
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-top: 0;
+.splashHeading > h2 {
+  text-shadow: 0 1px 2px white, 0 -1px 2px white, -1px 0 2px white, 1px 0 2px white;
 }
 
-.splash > h3 {
+.splashHeading > h3 {
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 14px;
   margin-top: 8px;
 }

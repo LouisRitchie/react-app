@@ -36,8 +36,10 @@ function startExpress(port) {
 	})
 
 	app.get("*.png", function (req, res) {
-    console.log(Object.keys(req))
-    console.log(req.path)
+		res.sendFile(path.join(DIST_DIR, req.path))
+	})
+
+	app.get("*.jpg", function (req, res) {
 		res.sendFile(path.join(DIST_DIR, req.path))
 	})
 
