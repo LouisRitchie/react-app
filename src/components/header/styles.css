@@ -14,6 +14,16 @@
   width: calc(100% - 96px);
 }
 
+.header::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: repeating-linear-gradient(to left, #c0342a 0, #c0342a 40px, #643e70 40px, #643e70 80px, #c3571d 80px, #c3571d 120px, #81521d 120px, #81521d 160px, #679843 160px, #679843 200px);
+}
+
 .title {
   font-size: 1.3em;
 }
