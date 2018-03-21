@@ -8,12 +8,12 @@
   margin: 0 auto;
 }
 
-.valueProp:nth-child(even) {
-  background: #eee;
+.valueProp:nth-child(4n+2) {
+  background: linear-gradient(120deg, #e6edff, #ece3ff);
 }
 
-.valueProp:nth-child(odd) {
-  background: lightgreen;
+.valueProp:nth-child(4n+0) {
+  background: linear-gradient(60deg, #e1e9ff, #dce1ff);
 }
 
 .reverse {
