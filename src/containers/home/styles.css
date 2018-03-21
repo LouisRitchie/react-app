@@ -4,6 +4,36 @@
   width: 100%;
 }
 
+.splash {
+  height: 70vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.splash > h1,
+.splash > h2,
+.splash > h3 {
+  margin-left: 70px;
+}
+
+.splash > h1 {
+  font-size: 64px;
+}
+
+.splash > h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.splash > h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 .section {
   display: flex;
   flex-flow: row;
