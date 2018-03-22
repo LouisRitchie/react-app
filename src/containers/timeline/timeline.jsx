@@ -51,6 +51,8 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
+        <div className='timelineHeader'>Timeline</div>
+
         <VerticalTimeline>
           {timelineItems.map(({title, role, description, start, end, discipline}) => (
             <VerticalTimelineElement

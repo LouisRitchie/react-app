@@ -1,6 +1,19 @@
 .hireme {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.hiremeImage {
+  max-width: 200px;
+  padding: 4vh 0;
+}
+
+.hiremeText {
   height: calc(96vh - 40px - 55px);
-  padding: 2vh 5vw;
+  padding: 2vh 5vw 2vh 2vw;
+  max-width: 600px;
 }
 
 .sellParagraph {
@@ -9,7 +22,17 @@
 
 @media(max-width: 750px) {
   .hireme {
+    flex-flow: column;
+    flex-direction: column-reverse;
+  }
+
+  .hiremeText {
     height: auto;
     min-height: calc(96vh - 40px - 90px);
+  }
+
+  .hiremeImage {
+    align-self: center;
+    padding: 1vh 0 8vh;
   }
 }
