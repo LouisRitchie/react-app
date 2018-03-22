@@ -27,7 +27,8 @@
 
 @media(max-width: 650px) {
   .box {
-    width: calc(var(--sliding-box-container-width) - 12px);
+    width: 100%;
+    margin-top: 10px;
   }
 
   .photo {

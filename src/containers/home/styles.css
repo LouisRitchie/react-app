@@ -90,6 +90,7 @@
   text-align: center;
   margin: 100px auto 50px;
   max-width: 1400px;
+  text-shadow: 0 1px 8px var(--light-blue-1), 0 -1px 3px var(--light-purple-1), -1px 0 5px var(--light-blue-2);
 }
 
 .sectionHeader:before,

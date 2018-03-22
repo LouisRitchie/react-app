@@ -16,6 +16,16 @@ body {
 
   --sliding-box-container-width: 40vw;
   --sliding-box-container-margin: initial;
+
+  --light-blue-1: #e6edff;
+  --light-purple-1: #ece3ff;
+  --light-blue-2: #e1e9ff;
+  --light-purple-2: #dce1ff;
+
+  --linear-gradient-1: linear-gradient(180deg, white, var(--light-blue-2), var(--light-purple-2));
+  --linear-gradient-2: linear-gradient(180deg, var(--light-blue-1), var(--light-purple-1), white);
+
+  --repeating-linear-gradient: repeating-linear-gradient(to left, #779eff 0, #779eff 40px, #9a68ff 40px, #9a68ff 80px, #1e9aff 80px, #1e9aff 120px, #5b8aff 120px, #5b8aff 160px, #425eff 160px, #425eff 200px);
 }
 
 @media(max-width: 650px) {

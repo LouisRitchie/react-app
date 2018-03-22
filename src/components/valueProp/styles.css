@@ -10,11 +10,29 @@
 }
 
 .valueProp:nth-child(4n+1) {
-  background: linear-gradient(180deg, white, #e1e9ff, #dce1ff);
+  background: var(--linear-gradient-1);
 }
 
 .valueProp:nth-child(4n+3) {
-  background: linear-gradient(180deg, #e6edff, #ece3ff, white);
+  background: var(--linear-gradient-2);
+}
+
+.valueProp:nth-child(4n+1)::after,
+.valueProp:nth-child(4n+3)::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background: var(--repeating-linear-gradient);
+  opacity: 0.5;
+}
+
+.valueProp:nth-child(4n+1)::after {
+  bottom: 0;
+}
+
+.valueProp:nth-child(4n+3)::after {
+  top: 0;
 }
 
 .valueProp:last-child {
