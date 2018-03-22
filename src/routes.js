@@ -1,13 +1,13 @@
 import Home from 'containers/home'
-import About from 'containers/about'
+import HireMe from 'containers/hireme'
 import Projects from 'containers/projects'
 import Timeline from 'containers/timeline'
 
 export default [
   {
-    path: '/about',
-    component: About,
-    name: 'About'
+    path: '/hireme',
+    component: HireMe,
+    name: 'Hire Me!'
   },
   {
     path: '/projects',

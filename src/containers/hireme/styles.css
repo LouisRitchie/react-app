@@ -1,0 +1,15 @@
+.hireme {
+  height: calc(96vh - 40px - 55px);
+  padding: 2vh 5vw;
+}
+
+.sellParagraph {
+  text-align: left;
+}
+
+@media(max-width: 750px) {
+  .hireme {
+    height: auto;
+    min-height: calc(96vh - 40px - 90px);
+  }
+}
