@@ -21,11 +21,17 @@
   width: 100%;
   text-align: center;
   transition: top 1s ease-out, opacity 1s ease-out;
-  color: #444;
+  color: #777;
+  font-size: 13px;
 }
 
 @media(max-width: 650px) {
   .box {
-    width: var(--sliding-box-container-width);
+    width: calc(var(--sliding-box-container-width) - 12px);
+  }
+
+  .photo {
+    max-width: calc(100% - 12px);
+    margin-left: 6px;
   }
 }

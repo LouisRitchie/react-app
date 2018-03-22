@@ -3,9 +3,10 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  height: 550px;
+  height: auto;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 80px 0;
 }
 
 .valueProp:nth-child(4n+1) {
@@ -17,7 +18,7 @@
 }
 
 .valueProp:last-child {
-  padding-bottom: 150px;
+  padding-bottom: 200px;
 }
 
 .reverse {
@@ -34,7 +35,6 @@
   text-align: left;
   margin-left: var(--value-prop-text-container-margin-centerside);
   margin-right: var(--value-prop-text-container-margin-edgeside);
-  margin-right: 0;
 }
 
 .textContainer {
@@ -52,8 +52,8 @@
   .valueProp {
     flex-flow: column nowrap;
     justify-content: flex-start;
-    height: auto;
     padding: 40px 0 calc(var(--sliding-box-container-height) + 60px);
+    margin: 0 6px;
   }
 
   .valueProp:last-child {

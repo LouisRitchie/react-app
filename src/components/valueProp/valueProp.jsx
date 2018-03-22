@@ -54,8 +54,8 @@ class ValueProp extends Component {
           </div>
         </div>
         <SlidingBox
-          slideDistance={isMobile ? 100 : 400}
-          fromTopOfContainer={isMobile ? 0 : 100}
+          slideDistance={isMobile ? 100 : 300}
+          fromTopOfContainer={isMobile ? 0 : 10}
           index={index}
           photoDescription={photoDescription}
           slug={slug} />

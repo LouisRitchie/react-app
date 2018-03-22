@@ -20,6 +20,8 @@ class Home extends Component {
           </div>
         </div>
 
+        <div className='sectionHeader'>Portfolio</div>
+
         {items.map((item, i) => (
           <ValueProp {...item} index={i} key={item.slug} />
         ))}
