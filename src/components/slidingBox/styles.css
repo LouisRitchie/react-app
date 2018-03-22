@@ -3,6 +3,7 @@
   max-width: 550px;
   width: var(--sliding-box-container-width);
   margin: var(--sliding-box-container-margin);
+  flex: 0 0 auto;
 }
 
 .box {
@@ -25,7 +26,7 @@
   font-size: 13px;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
   .box {
     width: 100%;
     margin-top: 10px;

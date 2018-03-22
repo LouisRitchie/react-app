@@ -37,7 +37,7 @@ small {
   color: #444;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
   h1 {
     font-size: 40px;
     line-height: 42px;

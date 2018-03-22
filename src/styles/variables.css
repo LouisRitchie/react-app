@@ -28,7 +28,7 @@ body {
   --repeating-linear-gradient: repeating-linear-gradient(to left, #779eff 0, #779eff 40px, #9a68ff 40px, #9a68ff 80px, #1e9aff 80px, #1e9aff 120px, #5b8aff 120px, #5b8aff 160px, #425eff 160px, #425eff 200px);
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
   body {
     --margin-left: 16px;
     --margin-top: 90px;

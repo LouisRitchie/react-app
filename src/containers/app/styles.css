@@ -11,7 +11,7 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
   .container {
     padding: 0;
   }

@@ -65,7 +65,7 @@
   border-color: white;
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
   .header {
     height: 90px;
     width: 100%;
