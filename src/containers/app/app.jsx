@@ -16,11 +16,13 @@ class App extends Component {
   render() {
     const { lightsOn } = this.state
 
+    console.log()
+
     return (
       <div className="app">
         <Header />
 
-        <div className={`container ${lightsOn ? 'lightsOn' : ''}`}>
+        <div className={`container ${lightsOn ? 'lightsOn' : ''} ${window.location.pathname.split('/')[1]}Container`}>
           <Switch>
             {routes.map(({component, name, path}) => (
               <Route
