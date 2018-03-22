@@ -32,7 +32,7 @@ function startWebpack() {
 function startExpress(port) {
 	const app = express()
 	const PUBLIC_DIR = path.join(__dirname, 'public')
-	const DIST_DIR = path.join(__dirname, 'dist')
+	const DIST_DIR = path.join(__dirname, 'webpack/dist')
 	PUBLIC_URL = `http://localhost:${port}`
 
 	app.use(express.static(PUBLIC_DIR))

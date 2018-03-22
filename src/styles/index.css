@@ -36,3 +36,14 @@ small {
   text-transform: uppercase;
   color: #444;
 }
+
+@media(max-width: 650px) {
+  h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  h2 {
+    font-size: 0.8;
+  }
+}
