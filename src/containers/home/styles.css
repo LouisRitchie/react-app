@@ -82,7 +82,6 @@
   justify-content: flex-start;
 }
 
-
 .sectionHeader {
   position: relative;
   font-size: 42px;
@@ -109,6 +108,21 @@
 
 .sectionHeader:before {
   left: 25px;
+}
+
+.sectionHeader:last-child {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.sectionHeader:last-child:before,
+.sectionHeader:last-child:after {
+  width: calc(50% - 240px);
+}
+
+.sectionHeader a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 @media(max-width: 750px) {

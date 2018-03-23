@@ -29,6 +29,11 @@
   margin-top: 1px;
 }
 
+.title a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .nav {
   height: 100%;
   font-size: 1em;

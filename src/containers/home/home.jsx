@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ValueProp from 'components/valueProp'
 import './styles.css'
+import { Link } from 'react-router-dom'
 import items from './items.json'
 
 class Home extends Component {
@@ -25,6 +26,8 @@ class Home extends Component {
         {items.map((item, i) => (
           <ValueProp {...item} index={i} key={item.slug} />
         ))}
+
+        <div className='sectionHeader'><Link to='/portfolio'>View Full Portfolio</Link></div>
       </div>
     )
   }

@@ -6,7 +6,8 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p>Website of Louis Ritchie, a Software Developer in Victoria BC | <a href='https://github.com/louisritchie/react-app.git'>view source</a></p>
+        <p>Website of Louis Ritchie, a Software Developer in Victoria BC</p>
+        <a href='https://github.com/louisritchie/react-app.git'>view source</a>
       </div>
     )
   }

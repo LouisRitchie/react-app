@@ -15,20 +15,27 @@
   box-shadow: 0 -2px 4px rgba(0,0,0,.14),0 -6px 8px rgba(0,0,0,.28);
 }
 
+.footer p,
+.footer a {
+  white-space: nowrap;
+}
+
 .footer p {
   text-align: left;
   font-size: 11px;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.footer p a {
+.footer a {
   color: white;
+  font-size: 11px;
 }
 
 @media(max-width: 750px) {
   .footer {
-    flex-flow: column;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
+    width: 90%;
+    padding: 0 5vw;
   }
 }

@@ -13,6 +13,7 @@
   padding-top: 30px;
   z-index: 1;
   box-shadow: 0 0 5px var(--navy), 0 5px 10px var(--navy);
+  margin: 0 auto;
 }
 
 .timelineHeader:before,
@@ -45,6 +46,13 @@
   border: 1px solid var(--light-purple-1);
 }
 
+.vertical-timeline-element-icon svg {
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  margin-top: -17px;
+}
+
 .vertical-timeline::before {
   background: var(--light-purple-1);
   height: 100%;
@@ -72,5 +80,14 @@
     color: var(--light-blue-1);
     opacity: 1;
     padding: 0.8em 20px;
+  }
+}
+
+@media(max-width: 750px) {
+  .vertical-timeline-element-icon svg {
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    margin-top: -12px;
   }
 }
