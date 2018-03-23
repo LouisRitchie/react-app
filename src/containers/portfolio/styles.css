@@ -1,3 +1,54 @@
 .portfolio {
   color: green;
 }
+
+.portfolioContainer {
+  background: var(--linear-gradient-3);
+  height: calc(100vh - 40px - 55px);
+}
+
+.browsePortfolio {
+  display: flex;
+}
+
+.browseItem {
+  margin: 10px 10px 0 0; 
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--light-blue-1);
+  border-radius: 3px;
+  width: 300px;
+  height: 100px;
+}
+
+.browseItem h1,
+.browseItem h2 {
+  white-space: nowrap;
+}
+
+.browseItem h1 {
+  font-size: 32px;
+  line-height: 34px;
+}
+
+.browseItem h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.browseItem a {
+  color: initial;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+
+  height: 100%;
+}
+
+.browseItem a:hover {
+  opacity: 1;
+}

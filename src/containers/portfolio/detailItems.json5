@@ -5,7 +5,7 @@
       description: 'Reelgood keeps track of your favourite shows and streaming services that youre subscribed to. I was a member of Reelgoods web team for one year. I wrote React code that interacted with tens of APIs, handling user auth and email tokens, data loading, updating user preferences, and so on. I also wrote the playback mechanism. Its a library that takes the users watched episodes and selected services and determines what streaming service to open on a given show when the user hits the play button.',
       times: 'March 2017 - March 2018',
       disciplines: [
-        'react',
+        '_react',
         'git',
         'css'
       ],
@@ -28,7 +28,7 @@
       description: 'I spent eight months as a Junior developer at Ruboss, the Victoria-based company behind Leanpub. I wrote React and Ruby on Rails code for Leanpub and for individual client projects. This is where I cut my teeth on web development.',
       times: 'April 2016 - December 2016',
       disciplines: [
-        'react',
+        '_react',
         'rails',
         'git',
         'css'

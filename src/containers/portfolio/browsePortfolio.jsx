@@ -12,8 +12,8 @@ class BrowsePortfolio extends Component {
           Object.keys(detailItems).map(slug => (
             <div className='browseItem'>
               <Link to={`/portfolio/${slug}`}>
-                <div className='itemHeading'>{detailItems[slug].heading}</div> 
-                <div className='itemSubheading'>{detailItems[slug].subheading}</div> 
+                <h1 className='itemHeading'>{detailItems[slug].heading}</h1> 
+                <h2 className='itemSubheading'>{detailItems[slug].subheading}</h2> 
                 <Disciplines disciplines={detailItems[slug].disciplines} />
               </Link> 
             </div>

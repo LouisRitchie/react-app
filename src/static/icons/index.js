@@ -6,7 +6,6 @@ import GithubIcon from './github.svg'
 import GitIcon from './git.svg'
 import JavascriptIcon from './javascript.svg'
 import JavaIcon from './java.svg'
-import LogoIcon from './logo.svg'
 import NginxIcon from './nginx.svg'
 import NodeIcon from './node.svg'
 import ReactIcon from './reactIcon.svg'
@@ -24,7 +23,6 @@ export default {
   git: <GitIcon />,
   javascript: <JavascriptIcon />,
   java: <JavaIcon />,
-  logo: <LogoIcon />,
   nginx: <NginxIcon />,
   node: <NodeIcon />,
   _react: <ReactIcon />, // does not work without underscore. because I'm writing React, most likely.

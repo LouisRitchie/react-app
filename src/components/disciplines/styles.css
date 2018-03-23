@@ -1,2 +1,18 @@
 .disciplines {
 }
+
+.disciplines span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.disciplines span svg {
+  width: 16px;
+  vertical-align: sub;
+}
+
+.disciplines span span {
+  line-height: 20px;
+  font-weight: 100;
+  font-size: 13px;
+}
