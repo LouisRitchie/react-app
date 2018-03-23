@@ -41,6 +41,10 @@ function startExpress(port) {
 		res.sendFile(path.join(DIST_DIR, 'bundle.js'))
 	})
 
+	app.get('/*/bundle.js', function (req, res) {
+		res.sendFile(path.join(DIST_DIR, 'bundle.js'))
+	})
+
 	app.get('*.png', function (req, res) {
 		res.sendFile(path.join(DIST_DIR, req.path))
 	})
@@ -49,7 +53,13 @@ function startExpress(port) {
 		res.sendFile(path.join(DIST_DIR, req.path))
 	})
 
+	app.get('/*/*', function (req, res) {
+    console.log('received /*/*', req.path)
+		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
+	})
+
 	app.get('*', function (req, res) {
+    console.log('received *')
 		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
 	})
 

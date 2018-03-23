@@ -1,6 +1,6 @@
 import Home from 'containers/home'
 import HireMe from 'containers/hireme'
-import Projects from 'containers/projects'
+import Portfolio from 'containers/portfolio'
 import Timeline from 'containers/timeline'
 
 export default [
@@ -10,9 +10,9 @@ export default [
     name: 'Hire Me!'
   },
   {
-    path: '/projects',
-    component: Projects,
-    name: 'Projects'
+    path: '/portfolio',
+    component: Portfolio,
+    name: 'Portfolio'
   },
   {
     path: '/timeline',
