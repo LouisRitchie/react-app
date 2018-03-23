@@ -10,7 +10,8 @@ import LogoIcon from './logo.svg'
 import NginxIcon from './nginx.svg'
 import NodeIcon from './node.svg'
 import ReactIcon from './reactIcon.svg'
-import SchoolIconIcon from './schoolIcon.svg'
+import RailsIcon from './rails.svg'
+import SchoolIcon from './school.svg'
 import TwitterIcon from './twitter.svg'
 import UbuntuIcon from './ubuntu.svg'
 import VimIcon from './vim.svg'
@@ -26,8 +27,9 @@ export default {
   logo: <LogoIcon />,
   nginx: <NginxIcon />,
   node: <NodeIcon />,
-  reactIcon: <ReactIcon />,
-  schoolIcon: <SchoolIconIcon />,
+  _react: <ReactIcon />, // does not work without underscore. because I'm writing React, most likely.
+  rails: <RailsIcon />,
+  school: <SchoolIcon />,
   twitter: <TwitterIcon />,
   ubuntu: <UbuntuIcon />,
   vim: <VimIcon />,

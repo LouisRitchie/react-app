@@ -37,6 +37,6 @@
     description: 'Global Game Jam was a game development competition that I organized.',
     start: 'January 2017',
     end: 'March 2017',
-    discipline: 'reactIcon'
+    discipline: '_react'
   }
 ]
