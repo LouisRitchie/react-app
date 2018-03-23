@@ -13,6 +13,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.json5$/,
+        use: ['json5-loader']
+      },
+      {
         test: /\.svg$/,
         use: ['svg-react-loader']
       },

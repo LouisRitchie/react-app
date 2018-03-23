@@ -54,12 +54,10 @@ function startExpress(port) {
 	})
 
 	app.get('/*/*', function (req, res) {
-    console.log('received /*/*', req.path)
 		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
 	})
 
 	app.get('*', function (req, res) {
-    console.log('received *')
 		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
 	})
 

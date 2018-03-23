@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './styles.css'
+import detailItems from 'containers/portfolio/detailItems.json5'
 
 class DetailPage extends Component {
-  render() {
-    console.log('logging props of detail page: ', this.props)
+  componentWillMount() {
+    const { match: { params: { slug } } } = this.props
 
+    this.setState({ ...detailItems[slug] })
+  }
+
+  render() {
+    console.log(this.state)
     return (
       <div className="detailPage">
-        I am a detail page
+        {this.state.heading}
       </div>
     )
   }

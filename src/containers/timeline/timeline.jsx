@@ -3,49 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'lib/react-vertical-t
 import 'lib/react-vertical-timeline-component/style.min.css';
 import './styles.css'
 import icons from 'static/icons'
-
-const timelineItems = [
-  {
-    title: 'Global Game Jam',
-    role: 'Lead Organizer',
-    description: 'Global Game Jam was a game development competition that I organized. I raised some $3000 from local companies and used it to pay for food and beverages for an entire weekend of game development. The event had 30 participants. I built a little brochure website in plain HTML, set up EventBrite for ticket sales, had T-shirts printed, registered a venue, and did everything else to get it off the ground.',
-    start: 'January 2017',
-    end: 'March 2017',
-    discipline: 'css'
-  },
-  {
-    title: 'Global Game Jam',
-    role: 'Lead Organizer',
-    description: 'Global Game Jam was a game development competition that I organized.',
-    start: 'January 2017',
-    end: 'March 2017',
-    discipline: 'git'
-  },
-  {
-    title: 'Global Game Jam',
-    role: 'Lead Organizer',
-    description: 'Global Game Jam was a game development competition that I organized.',
-    start: 'January 2017',
-    end: 'March 2017',
-    discipline: 'vim'
-  },
-  {
-    title: 'Global Game Jam',
-    role: 'Lead Organizer',
-    description: 'Global Game Jam was a game development competition that I organized.',
-    start: 'January 2017',
-    end: 'March 2017',
-    discipline: 'javascript'
-  },
-  {
-    title: 'Global Game Jam',
-    role: 'Lead Organizer',
-    description: 'Global Game Jam was a game development competition that I organized.',
-    start: 'January 2017',
-    end: 'March 2017',
-    discipline: 'reactIcon'
-  }
-]
+import timelineItems from './timelineItems.json5'
 
 class Timeline extends Component {
   render() {

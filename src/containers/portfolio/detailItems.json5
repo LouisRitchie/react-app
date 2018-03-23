@@ -1,0 +1,9 @@
+{
+    reelgood: {
+      heading: 'Web Developer at Reelgood',
+      subheading: 'March 2017 - March 2018',
+      description: 'Reelgood keeps track of your favourite shows and streaming services that youre subscribed to. I was a member of Reelgoods web team for one year. I wrote React code that interacted with tens of APIs, handling user auth and email tokens, data loading, updating user preferences, and so on. I also wrote the playback mechanism. Its a library that takes the users watched episodes and selected services and determines what streaming service to open on a given show when the user hits the play button.',
+      slug: 'reelgood3',
+      photoDescription: 'Reelgood - All your streaming services in one place.'
+    }
+}

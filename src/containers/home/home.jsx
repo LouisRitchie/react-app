@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ValueProp from 'components/valueProp'
 import './styles.css'
 import { Link } from 'react-router-dom'
-import items from './items.json'
+import items from './items.json5'
 
 class Home extends Component {
   render() {
