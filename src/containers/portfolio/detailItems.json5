@@ -24,7 +24,7 @@
     },
     leanpub: {
       heading: 'Leanpub',
-      subheading: 'Juniour Web Developer',
+      subheading: 'Junior Developer',
       description: 'I spent eight months as a Junior developer at Ruboss, the Victoria-based company behind Leanpub. I wrote React and Ruby on Rails code for Leanpub and for individual client projects. This is where I cut my teeth on web development.',
       times: 'April 2016 - December 2016',
       disciplines: [

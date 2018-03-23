@@ -45,7 +45,12 @@ function startExpress(port) {
 		res.sendFile(path.join(DIST_DIR, 'bundle.js'))
 	})
 
+	app.get('*/*.png', function (req, res) { // this code is getting bad. dear any potential clients: I will not be writing code of such low quality for any of your projects.
+		res.sendFile(path.join(DIST_DIR, '/' + req.path.split('/')[2]))
+	})
+
 	app.get('*.png', function (req, res) {
+    console.log('*.png', req.path)
 		res.sendFile(path.join(DIST_DIR, req.path))
 	})
 

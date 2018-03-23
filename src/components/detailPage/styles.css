@@ -1,0 +1,42 @@
+.detailPage {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 42px;
+  height: 100%;
+}
+
+.detailPageTop {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40%;
+}
+
+.headers {
+  width: 50%; 
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.times {
+
+}
+
+.detailPageBottom {
+  margin-top: 20px;
+}
+
+.detailTitle {
+  text-decoration: underline;
+}
+
+.detailPageDescription {
+  font-size: 14px;
+}
+
+.detailPage ol {
+  font-size: 14px;
+}
