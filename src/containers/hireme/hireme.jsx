@@ -5,7 +5,7 @@ class HireMe extends Component {
   render() {
     return (
       <div className='hireme'>
-        <img className='hiremeImage' src={require('../../static/images/myface.jpg')} />
+        <img className='hiremeImage' src={require('static/images/myface.jpg')} />
         <div className='hiremeText'>
           <h2>My specialty is beautiful interfaces.</h2>
 

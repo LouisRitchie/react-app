@@ -85,7 +85,7 @@ class SlidingBox extends Component {
           }}>
           <img
             className='photo'
-            src={require(`../../static/images/${slug}.png`)} />
+            src={require(`static/images/${slug}.png`)} />
           <p className='boxText'>{photoDescription}</p>
         </div>
       </div>

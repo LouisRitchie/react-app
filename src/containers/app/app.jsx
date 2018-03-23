@@ -16,8 +16,6 @@ class App extends Component {
   render() {
     const { lightsOn } = this.state
 
-    console.log()
-
     return (
       <div className="app">
         <Header />

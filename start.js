@@ -8,66 +8,49 @@ const prodConfig = require('./webpack/webpack.config.production.js')
 let PUBLIC_URL
 
 function startWebpack() {
-	console.log('[WEBPACK] Watching files.')
+  console.log('[WEBPACK] Watching files.')
 
-	const compiler = webpack(process.argv[2] === 'dev'
+  const compiler = webpack(process.argv[2] === 'dev'
     ? { ...config, ...devConfig }
     : { ...config, ...prodConfig }
   )
 
-	const watching = compiler.watch({
-		aggregateTimeout: 300,
-		poll: undefined
-	}, (err, stats) => {
-		if (err) {
-			console.log('[WEBPACK] ERROR: ' + err)
-		} else {
-			console.log('[WEBPACK] Finished compiling.')
-			console.log(stats.toString())
-			// do nothing with stats, as it appears to be a big object...
-		}
-	})
+  const watching = compiler.watch({
+    aggregateTimeout: 300,
+    poll: undefined
+  }, (err, stats) => {
+    if (err) {
+      console.log('[WEBPACK] ERROR: ' + err)
+    } else {
+      console.log('[WEBPACK] Finished compiling.')
+      console.log(stats.toString())
+      // do nothing with stats, as it appears to be a big object...
+    }
+  })
 }
 
 function startExpress(port) {
-	const app = express()
-	const PUBLIC_DIR = path.join(__dirname, 'public')
-	const DIST_DIR = path.join(__dirname, 'webpack/dist')
-	PUBLIC_URL = `http://localhost:${port}`
+  const app = express()
+  const PUBLIC_DIR = path.join(__dirname, 'public')
+  const DIST_DIR = path.join(__dirname, 'webpack/dist')
+  PUBLIC_URL = `http://localhost:${port}`
 
-	app.use(express.static(PUBLIC_DIR))
+  app.use(express.static(PUBLIC_DIR))
 
-	app.get('/bundle.js', function (req, res) {
-		res.sendFile(path.join(DIST_DIR, 'bundle.js'))
-	})
+  app.get('(/|/*/)bundle.js', function (req, res) {
+    res.sendFile(path.join(DIST_DIR, 'bundle.js'))
+  })
 
-	app.get('/*/bundle.js', function (req, res) {
-		res.sendFile(path.join(DIST_DIR, 'bundle.js'))
-	})
+  app.get('*.(png|jpg)', function (req, res) {
+    res.sendFile(path.join(DIST_DIR, `/${req.path.split('/')[req.path.split('/').length - 1]}`))
+  })
 
-	app.get('*/*.png', function (req, res) { // this code is getting bad. dear any potential clients: I will not be writing code of such low quality for any of your projects.
-		res.sendFile(path.join(DIST_DIR, '/' + req.path.split('/')[2]))
-	})
+  app.get('/(*|*/*)', function (req, res) {
+    res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
+  })
 
-	app.get('*.png', function (req, res) {
-    console.log('*.png', req.path)
-		res.sendFile(path.join(DIST_DIR, req.path))
-	})
-
-	app.get('*.jpg', function (req, res) {
-		res.sendFile(path.join(DIST_DIR, req.path))
-	})
-
-	app.get('/*/*', function (req, res) {
-		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
-	})
-
-	app.get('*', function (req, res) {
-		res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
-	})
-
-	app.listen(port)
-	console.log('[EXPRESS] Listening on port 3000.')
+  app.listen(port)
+  console.log('[EXPRESS] Listening on port 3000.')
 }
 
 startWebpack()
