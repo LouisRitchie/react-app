@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import SlidingBox from 'components/slidingBox'
+import Slider from 'components/slider'
 import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/take'
@@ -53,12 +53,12 @@ class ValueProp extends Component {
             <p>{description}</p>
           </div>
         </div>
-        <SlidingBox
-          slideDistance={isMobile ? 100 : 300}
-          fromTopOfContainer={isMobile ? 0 : 10}
-          index={index}
-          photoDescription={photoDescription}
-          slug={slug} />
+        <Slider startPositionX={300}>
+          <img
+            className='photo'
+            src={require(`static/images/${slug}.png`)} />
+          <p className='boxText'>{photoDescription}</p>
+        </Slider>
       </section>
     )
   }

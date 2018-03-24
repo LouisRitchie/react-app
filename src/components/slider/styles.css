@@ -1,8 +1,8 @@
-.slidingBoxContainer {
+.sliderContainer {
   position: relative;
   max-width: 550px;
-  width: var(--sliding-box-container-width);
-  margin: var(--sliding-box-container-margin);
+  width: var(--sliderContainer-box-container-width);
+  margin: var(--sliderContainer-box-container-margin);
   flex: 0 0 auto;
 }
 
