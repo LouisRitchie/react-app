@@ -11,9 +11,11 @@ import './styles.css'
 class Slider extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired,
+    once: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired,
     startPositionX: PropTypes.number,
-    startPositionY: PropTypes.number
+    startPositionY: PropTypes.number,
+    style: PropTypes.object
   }
 
  /* This component recieves at least one starting position for either X or Y axis.
@@ -23,6 +25,8 @@ class Slider extends Component {
   */
   constructor({startPositionX, startPositionY}) {
     super()
+
+    console.log(startPositionX, startPositionY)
 
     let startPosition = 0
     let axis = 0 // 0 is x axis, 1 is Y axis
@@ -64,6 +68,10 @@ class Slider extends Component {
 
   componentDidMount() {
     this.setState({ coefficient: this._getCoefficient() })
+
+    if (this.props.once) {
+      this._unmount$.next()
+    }
   }
 
   componentWillUnmount() {
@@ -96,13 +104,20 @@ class Slider extends Component {
 
   render() {
     return (
-      <div ref={this.props.id} className='sliderContainer'>
+      <div ref={this.props.id} className='sliderContainer' style={this.props.style}>
         <div
           className='box'
           style={{
-            top: this.state.coefficient * this.state.startPosition,
-            opacity: Math.abs(1 - this.state.coefficient),
-            transition: `top ${this.state.startPosition / 300}s ease-out, opacity ${this.state.startPosition / 300}s ease-out`
+            ...(this.state.axis === 0
+              ? {
+                left: this.state.coefficient * this.state.startPosition,
+                transition: `left ${this.state.startPosition / 300}s ease-out, opacity ${this.state.startPosition / 300}s ease-out`
+              } : {
+                top: this.state.coefficient * this.state.startPosition,
+                transition: `top ${this.state.startPosition / 300}s ease-out, opacity ${this.state.startPosition / 300}s ease-out`
+              }
+            ),
+            opacity: Math.abs(1 - this.state.coefficient)
           }}>
           {this.props.children}
         </div>

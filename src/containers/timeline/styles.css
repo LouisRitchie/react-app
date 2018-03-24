@@ -2,35 +2,10 @@
 
 }
 
-.timelineHeader {
-  color: white;
-  position: relative;
-  font-size: 42px;
-  font-weight: 700;
-  text-align: center;
-  max-width: 1400px;
-  text-shadow: 0 1px 1px var(--light-blue-1);
-  padding-top: 30px;
-  z-index: 1;
-  margin: 0 auto;
-}
-
-.timelineHeader:before,
-.timelineHeader:after {
-  position: absolute;
-  content: '';
-  width: calc(50% - 128px);
-  height: 3px;
-  background: var(--light-purple-1);
-  top: 58px;
-}
-
-.timelineHeader:after {
-  right: 25px;
-}
-
-.timelineHeader:before {
-  left: 25px;
+.timeline .splash {
+  background: var(--linear-gradient-2);
+  height: 120px;
+  margin-bottom: 30px;
 }
 
 .vertical-timeline {

@@ -53,7 +53,7 @@ class ValueProp extends Component {
             <p>{description}</p>
           </div>
         </div>
-        <Slider id={slug} startPositionY={300}>
+        <Slider style={isMobile ? {width: '90vw'} : {width: '40vw'}} id={slug} startPositionY={300}>
           <img
             className='photo'
             src={require(`static/images/${slug}.png`)} />

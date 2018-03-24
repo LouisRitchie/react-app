@@ -1,42 +1,52 @@
+.portfolioContainer {
+  height: calc(100vh - 40px - 55px);
+  height: 5000px;
+}
+
 .portfolio {
   height: 99%;
 }
 
-.portfolioContainer {
-  background: var(--linear-gradient-3);
-  height: calc(100vh - 40px - 55px);
+.portfolio .splash {
+  background: var(--linear-gradient-2);
+  height: 120px;
+  margin-bottom: 30px;
 }
 
-.browsePortfolio {
+.portfolioItems {
+  position: relative;
   display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-left: var(--margin-left);
 }
 
-.browseItem {
+.portfolioItem {
   margin: 10px 10px 0 0; 
   padding: 10px;
   background: white;
   border: 1px solid var(--light-blue-1);
   border-radius: 3px;
-  width: 300px;
+  width: 280px;
   height: 100px;
 }
 
-.browseItem h1,
-.browseItem h2 {
+.portfolioItem h1,
+.portfolioItem h2 {
   white-space: nowrap;
 }
 
-.browseItem h1 {
+.portfolioItem h1 {
   font-size: 32px;
   line-height: 34px;
 }
 
-.browseItem h2 {
+.portfolioItem h2 {
   font-size: 18px;
   margin-top: 0;
 }
 
-.browseItem a {
+.portfolioItem a {
   color: initial;
   text-decoration: none;
   opacity: 0.8;
