@@ -11,6 +11,7 @@ class Header extends Component {
         <div className="nav">
           {routes.slice(0).reverse().map(route => (
             <Link
+              key={route.path}
               to={route.path}
               className={`navItem ${window.location.pathname === route.path ? 'selected' : ''}`}>
               {route.name}

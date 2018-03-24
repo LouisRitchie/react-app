@@ -25,34 +25,36 @@ class DetailPage extends Component {
     const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug } = this.state
 
     return (
-      <div className='detailPage'>
-        <div className='detailPageTop'>
-          <div className='headers'>
-            <h1>{heading}</h1>
-            <h2>{subheading}</h2>
-            <div className='times'>{times}</div>
-            <Disciplines disciplines={disciplines} />
+      <Slider id={slug} startPositionX={100}>
+        <div className='detailPage'>
+          <div className='detailPageTop'>
+            <div className='headers'>
+              <h1>{heading}</h1>
+              <h2>{subheading}</h2>
+              <div className='times'>{times}</div>
+              <Disciplines disciplines={disciplines} />
+            </div>
+            <div>
+              <img
+                className='photo'
+                src={require(`static/images/${slug}.png`)} />
+              <p className='boxText'>{photoDescription}</p>
+            </div>
           </div>
-          <Slider startPositionX={300}>
-            <img
-              className='photo'
-              src={require(`static/images/${slug}.png`)} />
-            <p className='boxText'>{photoDescription}</p>
-          </Slider>
+          <div className='detailPageBottom'>
+            <div className='detailTitle'>Relevance</div>
+            <p className='detailPageDescription'>{description}</p>
+            <div className='detailTitle'>Links of Note</div>
+            <ol>
+              {links.map(({link, description}) => (
+                <li>
+                  <Link to={link}>{description}</Link>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
-        <div className='detailPageBottom'>
-          <div className='detailTitle'>Relevance</div>
-          <p className='detailPageDescription'>{description}</p>
-          <div className='detailTitle'>Links of Note</div>
-          <ol>
-            {links.map(({link, description}) => (
-              <li>
-                <Link to={link}>{description}</Link>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </div>
+      </Slider>
     )
   }
 }

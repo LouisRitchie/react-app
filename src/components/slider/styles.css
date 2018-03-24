@@ -1,14 +1,13 @@
 .sliderContainer {
   position: relative;
   max-width: 550px;
-  width: var(--sliderContainer-box-container-width);
-  margin: var(--sliderContainer-box-container-margin);
+  width: var(--slider-container-width);
+  margin: var(--slider-container-margin);
   flex: 0 0 auto;
 }
 
 .box {
   position: absolute;
-  transition: top 1s ease-out, opacity 1s ease-out;
   max-width: 100%;
   max-height: 600px;
 }

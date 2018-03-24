@@ -24,6 +24,7 @@ class App extends Component {
           <Switch>
             {routes.map(({component, name, path}) => (
               <Route
+                key={path}
                 path={path}
                 render={() => (
                   <TransitionContainer

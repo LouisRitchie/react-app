@@ -8,8 +8,6 @@ import 'rxjs/add/operator/sample'
 import 'rxjs/add/operator/takeUntil'
 import './styles.css'
 
-const IMAGE_HEIGHT = 500 // set image size here. Must be consistent for all home container images
-
 class Slider extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired,
@@ -18,8 +16,8 @@ class Slider extends Component {
     startPositionY: PropTypes.number
   }
 
- /* This component recieves at least one starting position for either X or Y direction.
-  * If both are provided, pick a direction randomly.
+ /* This component recieves at least one starting position for either X or Y axis.
+  * If both are provided, pick an axis randomly.
   * The start positions are relative to resting place of the component as it mounts.
   * You must also supply children that will slide into view.
   */
@@ -60,12 +58,12 @@ class Slider extends Component {
     this._pollScrollPosition$ = scroll$.sample(interval(100)).takeUntil(this._unmount$)
 
     this._pollScrollPosition$.subscribe(({pageX, pageY}) => (
-      this.setState({ coefficient: this._getCoefficient([pageX, pageY]) })
+      this.setState({ coefficient: this._getCoefficient() })
     ))
   }
 
   componentDidMount() {
-    this.setState({ coefficient: this._getCoefficient([0, 0]) })
+    this.setState({ coefficient: this._getCoefficient() })
   }
 
   componentWillUnmount() {
@@ -75,17 +73,15 @@ class Slider extends Component {
  /* coefficient === 0: image at full opacity and resting at final position
   * 0 < coefficient < 1: image is transitioning
   * coefficient === 1: image at zero opacity and resting at start position.
+  *
+  * don't call this before the component mounts.
   */
-  _getCoefficient = ([pageX, pageY]) => {
-    const distance = this.state.direction ? pageY + document.documentElement.clientHeight : pageX + document.documentElement.clientWidth
+  _getCoefficient = () => {
+    const distance = this.state.axis
+      ? document.documentElement.clientHeight - this.refs[this.props.id].getBoundingClientRect().top
+      : document.documentElement.clientWidth - this.refs[this.props.id].getBoundingClientRect().left
 
-    console.log(distance)
-    console.log(this.state)
-
-    const coefficient = (
-      document.documentElement.clientHeight + this.refs[this.props.id].getBoundingClientRect().top +
-      this.props.slideDistance
-    ) / this.props.slideDistance
+    const coefficient = 1 - distance / this.state.startPosition
 
     if (coefficient < 0) {
       return 0
@@ -104,8 +100,9 @@ class Slider extends Component {
         <div
           className='box'
           style={{
-            top: this.state.coefficient * IMAGE_HEIGHT,
-            opacity: 1 - this.state.coefficient * 2
+            top: this.state.coefficient * this.state.startPosition,
+            opacity: Math.abs(1 - this.state.coefficient),
+            transition: `top ${this.state.startPosition / 300}s ease-out, opacity ${this.state.startPosition / 300}s ease-out`
           }}>
           {this.props.children}
         </div>
