@@ -19,13 +19,11 @@ class Portfolio extends Component {
           {
             Object.keys(detailItems).map((slug, i) => (
               <Slider once style={{width: 320, height: 150}} id={slug} startPositionX={i % 2 === 1 ? 100 : 0} startPositionY={i % 2 === 0 ? 100 : 0}>
-                <div className='portfolioItem'>
-                  <Link to={`/portfolio/${slug}`}>
-                    <h1 className='itemHeading'>{detailItems[slug].heading}</h1>
-                    <h2 className='itemSubheading'>{detailItems[slug].subheading}</h2>
-                    <Disciplines disciplines={detailItems[slug].disciplines} />
-                  </Link>
-                </div>
+                <Link className='portfolioItem' to={`/portfolio/${slug}`}>
+                  <h3 className='itemHeading'>{detailItems[slug].heading}</h3>
+                  <h4 className='itemSubheading'>{detailItems[slug].subheading}</h4>
+                  <Disciplines disciplines={detailItems[slug].disciplines} />
+                </Link>
               </Slider>
             ))
           }
