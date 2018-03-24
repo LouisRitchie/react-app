@@ -29,7 +29,7 @@
   width: 280px;
   height: 100px;
   box-shadow: 0 3px 0 #ddd;
-  transition: background-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -46,6 +46,7 @@
 
 .portfolioItem h3 {
   font-size: 28px;
+  margin-top: -6px;
 }
 
 .portfolioItem h4 {
@@ -53,6 +54,7 @@
 }
 
 .portfolioItem:hover {
-  background-color: rgba(0,0,0,0.03);
-  transition: background-color 0.2s;
+  border-color: black;
+  box-shadow: 0 3px 0 #aaa;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }

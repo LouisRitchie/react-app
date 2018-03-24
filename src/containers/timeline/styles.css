@@ -12,6 +12,7 @@
   margin-bottom: 0;
   margin-top: 0;
   padding-top: 0;
+  padding-bottom: 80px;
 }
 
 .vertical-timeline-element-icon {
@@ -37,10 +38,22 @@
   border: 1px solid var(--light-blue-1);
   border-radius: 3px;
   background: white;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.vertical-timeline-element-content:hover {
+  border-color: black;
+  box-shadow: 0 3px 0 #aaa;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .vertical-timeline-element-title {
   font-size: 28px;
+}
+
+.vertical-timeline-element-content::before {
+  display: none;
 }
 
 @media(min-width: 1170px) {

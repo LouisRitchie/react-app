@@ -6,6 +6,20 @@ import icons from 'static/icons'
 import timelineItems from './timelineItems.json5'
 
 class Timeline extends Component {
+  // transform the timeline elements into links.
+  componentDidMount() {
+    const elements = document.getElementsByClassName('vertical-timeline-element-content')
+
+    for (let i in elements) {
+      if (isNaN(i)) {
+        break
+      }
+
+      elements[i].setAttribute('data-slug', 'reelgood')
+      elements[i].addEventListener('click', ({currentTarget: {dataset: {slug}}}) => this.props.history.push(`portfolio/${slug}`))
+    }
+  }
+
   render() {
     return (
       <div className="timeline">
