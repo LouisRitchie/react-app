@@ -23,13 +23,13 @@ class App extends Component {
         <div className={`container ${lightsOn ? 'lightsOn' : ''} ${window.location.pathname.split('/')[1]}Container`}>
           <Switch>
             {routes.map(({component: Component, name, path}) => (
-              <Route key={path} path={path} render={(props) => (
+              <Route exact key={path} path={path} render={(props) => (
                 <TransitionContainer hitLightSwitch={this._hitLightSwitch} match={props.match}>
                   <Component {...props} />
                 </TransitionContainer>
               )} />
             ))}
-            <Redirect from='/*' to='/' />
+            <Redirect from='/*' to='/404' />
           </Switch>
         </div>
 

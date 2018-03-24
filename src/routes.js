@@ -3,6 +3,7 @@ import HireMe from 'containers/hireme'
 import DetailPage from 'containers/detailPage'
 import Portfolio from 'containers/portfolio'
 import Timeline from 'containers/timeline'
+import Error from 'containers/error'
 
 export default [
   {
@@ -25,6 +26,12 @@ export default [
     path: '/timeline',
     component: Timeline,
     name: 'Timeline'
+  },
+  {
+    path: '/404',
+    component: Error,
+    name: '404',
+    hidden: true
   },
   {
     path: '/',
