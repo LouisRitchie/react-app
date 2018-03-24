@@ -22,8 +22,8 @@ class App extends Component {
 
         <div className={`container ${lightsOn ? 'lightsOn' : ''} ${window.location.pathname.split('/')[1]}Container`}>
           <Switch>
-            {routes.map(({component: Component, name, path}) => (
-              <Route exact key={path} path={path} render={(props) => (
+            {routes.map(({component: Component, name, path, regex}) => (
+              <Route exact key={path} path={regex} render={(props) => (
                 <TransitionContainer hitLightSwitch={this._hitLightSwitch} match={props.match}>
                   <Component {...props} />
                 </TransitionContainer>
