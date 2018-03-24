@@ -9,7 +9,7 @@ class Header extends Component {
       <div className="header">
         <h1 className="title"><Link to='/'>Louis Ritchie</Link></h1>
         <div className="nav">
-          {routes.slice(0).reverse().map(route => (
+          {routes.slice(0).reverse().filter(({hidden}) => !hidden).map(route => (
             <Link
               key={route.path}
               to={route.path}

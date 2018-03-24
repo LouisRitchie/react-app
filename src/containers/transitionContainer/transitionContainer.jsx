@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './styles.css'
 
 // This is a HOC that adds the lifecycle methods that handle our container transitions.
 class TransitionContainer extends Component {
-  componentDidMount = () => setTimeout(this.props.hitLightSwitch, 200)
-
-  componentWillReceiveProps = (nextProps) => {
-    if (nextProps.routeName !== this.props.routeName) {
-      this.props.hitLightSwitch()
-      setTimeout(this.props.hitLightSwitch, 200)
-    }
+  static propTypes = {
+    children: PropTypes.object.isRequired,
+    hitLightSwitch: PropTypes.func.isRequired
   }
 
-  render() {
-    const { component: Component } = this.props
+  componentDidMount = () => setTimeout(this.props.hitLightSwitch, 200)
 
-    return <Component />
+  componentWillUnmount = () => this.props.hitLightSwitch()
+
+  render() {
+    return this.props.children
   }
 }
 

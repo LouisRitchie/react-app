@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
-import BrowsePortfolio from './browsePortfolio'
-import DetailPage from 'components/detailPage'
+import { Link } from 'react-router-dom'
+import Disciplines from 'components/disciplines'
+import Slider from 'components/slider'
+import detailItems from './detailItems.json5'
 import './styles.css'
 
-class Portfolio extends Component {
+class BrowsePortfolio extends Component {
   render() {
     return (
-      <div className="portfolio">
-        <Route path='/portfolio/:slug' component={DetailPage} />
-        <Route exact path='/portfolio' component={BrowsePortfolio} />
+      <div className='browsePortfolio'>
+        {
+          Object.keys(detailItems).map((slug, i) => (
+            <Slider id={slug} startPositionX={i % 2 === 1 ? 100 : 0} startPositionY={i % 2 === 0 ? 100 : 0}>
+              <div className='browseItem'>
+                <Link to={`/portfolio/${slug}`}>
+                  <h1 className='itemHeading'>{detailItems[slug].heading}</h1>
+                  <h2 className='itemSubheading'>{detailItems[slug].subheading}</h2>
+                  <Disciplines disciplines={detailItems[slug].disciplines} />
+                </Link>
+              </div>
+            </Slider>
+          ))
+        }
       </div>
     )
   }
 }
 
-export default Portfolio
+export default BrowsePortfolio
