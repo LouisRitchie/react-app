@@ -1,5 +1,5 @@
 .timelineContainer {
-  background-color: var(--navy);
+
 }
 
 .timelineHeader {
@@ -19,8 +19,8 @@
 .timelineHeader:after {
   position: absolute;
   content: '';
-  width: calc(50% - 140px);
-  height: 1px;
+  width: calc(50% - 128px);
+  height: 3px;
   background: var(--light-purple-1);
   top: 58px;
 }
@@ -62,12 +62,16 @@
   box-shadow: 0 2px 1px var(--light-blue-1);
 }
 
-.vertical-timeline-element:nth-child(even) .vertical-timeline-element-content {
-  background: linear-gradient(120deg, white, var(--light-blue-2));
+.vertical-timeline-element:nth-child(3n) .vertical-timeline-element-content {
+  background: linear-gradient(120deg, var(--light-purple-1), var(--light-blue-1), white);
 }
 
-.vertical-timeline-element:nth-child(odd) .vertical-timeline-element-content {
-  background: linear-gradient(120deg, white, var(--light-purple-1));
+.vertical-timeline-element:nth-child(3n+1) .vertical-timeline-element-content {
+  background: linear-gradient(120deg, var(--light-blue-1), white, var(--light-blue-2));
+}
+
+.vertical-timeline-element:nth-child(3n+2) .vertical-timeline-element-content {
+  background: linear-gradient(120deg, white, var(--light-blue-1), var(--light-purple-1));
 }
 
 .vertical-timeline-element-title {

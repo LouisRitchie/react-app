@@ -1,6 +1,6 @@
 .container {
-  padding-left: 64px;
-  padding-right: 32px;
+  max-width: 1200px;
+  margin: auto;
   opacity: 0;
   transition: opacity 0s;
   margin-top: var(--margin-top);
