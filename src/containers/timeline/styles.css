@@ -66,6 +66,10 @@
 }
 
 @media(max-width: 750px) {
+  .timeline .splash {
+    margin-bottom: 0;
+  }
+
   .vertical-timeline-element-icon svg {
     width: 24px;
     height: 24px;

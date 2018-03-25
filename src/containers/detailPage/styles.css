@@ -96,3 +96,18 @@
   border: 1px dashed #ddd;
   border-radius: 3px;
 }
+
+@media(max-width: 750px) {
+  .detailPageBottom .detailLeft {
+    display: initial;
+    width: initial;
+    border: none;
+    padding-right: 0;
+  }
+
+  .detailPageBottom .detailRight {
+    display: initial;
+    width: initial;
+    padding-left: 0;
+  }
+}

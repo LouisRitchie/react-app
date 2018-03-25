@@ -66,3 +66,17 @@
   font-size: 12px;
   color: black;
 }
+
+@media(max-width: 750px) {
+  .portfolioContainer {
+    height: 750px;
+  }
+
+  .portfolio .splash {
+    margin-bottom: 0;
+  }
+
+  .portfolioItem {
+    width: 260px;
+  }
+}

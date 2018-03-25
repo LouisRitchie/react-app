@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Disciplines from 'components/disciplines'
 import Slider from 'components/slider'
+import './styles.css'
 import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/take'
 import 'rxjs/add/operator/takeUntil'
-import './styles.css'
 import detailItems from 'containers/portfolio/detailItems.json5'
 import './styles.css'
 
@@ -19,6 +19,26 @@ class DetailPage extends Component {
     const { match: { params: { slug } } } = this.props
 
     this.setState({ ...detailItems[slug] })
+  }
+
+  componentDidMount() {
+    this._unmount$ = (new Subject()).take(1)
+    resize$.takeUntil(this._unmount$).subscribe(this._checkIfMobile)
+    this._checkIfMobile()
+  }
+
+  componentWillUnmount() {
+    this._unmount$.next()
+  }
+
+  _checkIfMobile = () => {
+    if (this.state.isMobile && document.documentElement.clientWidth > 750) {
+      return this.setState({ isMobile: false })
+    }
+
+    if (!this.state.isMobile && document.documentElement.clientWidth < 750) {
+      return this.setState({ isMobile: true })
+    }
   }
 
   render() {
