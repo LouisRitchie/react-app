@@ -25,16 +25,16 @@ class DetailPage extends Component {
     const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug } = this.state
 
     return (
-      <Slider style={{marginLeft: 'var(--margin-left)'}} id={slug} startPositionX={100}>
+      <Slider style={{marginLeft: 'var(--margin-left)', maxWidth: '100%'}} id={slug} startPositionX={1}>
         <div className='detailPage'>
           <div className='detailPageTop'>
             <div className='headers'>
               <h1>{heading}</h1>
-              <h2>{subheading}</h2>
+              <h3>{subheading}</h3>
               <div className='times'>{times}</div>
               <Disciplines disciplines={disciplines} />
             </div>
-            <div>
+            <div className='photoWrapper'>
               <img
                 className='photo'
                 src={require(`static/images/${slug}.png`)} />
@@ -42,16 +42,20 @@ class DetailPage extends Component {
             </div>
           </div>
           <div className='detailPageBottom'>
-            <div className='detailTitle'>Relevance</div>
-            <p className='detailPageDescription'>{description}</p>
-            <div className='detailTitle'>Links of Note</div>
-            <ol>
-              {links.map(({link, description}) => (
-                <li>
-                  <Link to={link}>{description}</Link>
-                </li>
-              ))}
-            </ol>
+            <div className='detailLeft'>
+              <div className='detailTitle'>Relevance</div>
+              <p className='detailPageDescription'>{description}</p>
+            </div>
+            <div className='detailRight'>
+              <div className='detailTitle'>Links of Note</div>
+              <ol>
+                {links.map(({link, description}) => (
+                  <li>
+                    <Link to={link}>{description}</Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </div>
       </Slider>

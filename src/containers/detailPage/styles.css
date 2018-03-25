@@ -1,10 +1,14 @@
 .detailPage {
-  max-width: 850px;
-  margin: 0 auto;
+  max-width: calc(100% - (var(--margin-left)) - 40px);
+  margin: 0;
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 42px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #aaa;
   height: 100%;
+  width: 100vw;
 }
 
 .detailPageTop {
@@ -18,19 +22,51 @@
   height: 50%;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.times {
+.detailPage h1 {
+  font-size: 48px;
+  margin-top: -8px;
+  margin-left: -2px;
+}
 
+.detailPage h3 {
+  margin: 10px 0 15px;
+  font-size: 28px;
+}
+
+.detailPage .times {
+  margin-bottom: 15px;
+}
+
+.detailPage .photoWrapper {
+  width: 100%;
 }
 
 .detailPage .photo {
-  width: 50vw;
+  width: 90%;
+  margin: 0 5%;
 }
 
 .detailPageBottom {
-  margin-top: 20px;
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.detailPageBottom .detailLeft {
+  display: inline-block;
+  float: left;
+  padding-right: 6%;
+  border-right: 1px solid #ddd;
+  width: 45%;
+}
+
+.detailPageBottom .detailRight {
+  display: inline-block;
+  padding-left: 3%;
+  width: 45%;
 }
 
 .detailTitle {

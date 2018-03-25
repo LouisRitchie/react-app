@@ -28,7 +28,7 @@ class Portfolio extends Component {
             <div className='portfolioItems'>
               {
                 Object.keys(detailItems).map((slug, i) => (
-                  <Slider once style={{width: 340, height: 150}} id={slug} startPositionX={i % 2 === 1 ? 100 : 0} startPositionY={i % 2 === 0 ? 100 : 0}>
+                  <Slider once style={{width: 340, height: 150}} id={slug} startPositionX={i % 2 === 1 ? 40 : 0} startPositionY={i % 2 === 0 ? 40 : 0}>
                     <Link className='portfolioItem' to={`/portfolio/${slug}`}>
                       <h3 className='itemHeading'>{detailItems[slug].heading}</h3>
                       <h4 className='itemSubheading'>{detailItems[slug].subheading}</h4>
