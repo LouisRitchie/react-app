@@ -22,7 +22,7 @@ class DetailPage extends Component {
   }
 
   render() {
-    const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug } = this.state
+    const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug, extension, hasImage } = this.state
 
     return (
       <Slider style={{marginLeft: 'var(--margin-left)', maxWidth: '100%'}} id={slug} startPositionX={1}>
@@ -35,10 +35,9 @@ class DetailPage extends Component {
               <span><em>Technologies:</em></span><Disciplines disciplines={disciplines} />
             </div>
             <div className='photoWrapper'>
-              <img
-                className='photo'
-                src={require(`static/images/${slug}.png`)} />
-              <p className='boxText'>{photoDescription}</p>
+              { hasImage && <img className='photo' src={require(`static/images/${slug}.${extension}`)} /> }
+              { hasImage && <p className='boxText'>{photoDescription}</p> }
+              { !hasImage && <div className='noImage'>No Image</div> }
             </div>
           </div>
           <div className='detailPageBottom'>

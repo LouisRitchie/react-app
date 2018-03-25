@@ -23,6 +23,7 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
+  min-width: 350px;
 }
 
 .detailPage h1 {
@@ -85,4 +86,13 @@
   line-height: 20px;
   font-weight: 100;
   font-size: 15px;
+}
+
+.noImage {
+  height: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ddd;
+  border-radius: 3px;
 }

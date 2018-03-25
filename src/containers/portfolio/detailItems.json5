@@ -9,7 +9,9 @@
         'git',
         'css'
       ],
-      slug: 'reelgood3',
+      slug: 'reelgood',
+      extension: 'png',
+      hasImage: true,
       links: [
         {
           link: 'https://reelgood.com',
@@ -34,6 +36,8 @@
         'css'
       ],
       slug: 'leanpub',
+      extension: 'png',
+      hasImage: true,
       links: [
         {
           link: 'https://leanpub.com',
