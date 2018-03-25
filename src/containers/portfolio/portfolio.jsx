@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import Disciplines from 'components/disciplines'
 import DetailPage from 'containers/detailPage'
 import Slider from 'components/slider'
-import detailItems from './detailItems.json5'
+import items from 'static/items.json5'
 import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/take'
@@ -55,12 +55,12 @@ class Portfolio extends Component {
           (
             <div className='portfolioItems'>
               {
-                Object.keys(detailItems).map((slug, i) => (
+                Object.keys(items).map((slug, i) => (
                   <Slider once style={this.state.isMobile ? {width: 298, height: 130} : {width: 340, height: 150}} id={slug} startPositionX={i % 2 === 1 ? 40 : 0} startPositionY={i % 2 === 0 ? 40 : 0}>
                     <Link className='portfolioItem' to={`/portfolio/${slug}`}>
-                      <h3 className='itemHeading'>{detailItems[slug].heading}</h3>
-                      <h4 className='itemSubheading'>{detailItems[slug].subheading}</h4>
-                      <Disciplines disciplines={detailItems[slug].disciplines} />
+                      <h3 className='itemHeading'>{items[slug].heading}</h3>
+                      <h4 className='itemSubheading'>{items[slug].subheading}</h4>
+                      <Disciplines disciplines={items[slug].disciplines} />
                     </Link>
                   </Slider>
                 ))

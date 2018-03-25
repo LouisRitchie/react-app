@@ -1,0 +1,194 @@
+{
+  reelgood: {
+    heading: 'Reelgood',
+    subheading: 'Web Developer',
+    description: 'Reelgood keeps track of your favourite shows and streaming services that youre subscribed to. I was a member of Reelgoods web team for one year. I wrote React code that interacted with tens of APIs, handling user auth and email tokens, data loading, updating user preferences, and so on. I also wrote the playback mechanism. Its a library that takes the users watched episodes and selected services and determines what streaming service to open on a given show when the user hits the play button.',
+    times: 'March 2017 - March 2018',
+    disciplines: [
+      '_react',
+      'git',
+      'css'
+    ],
+    slug: 'reelgood',
+    extension: 'png',
+    hasImage: true,
+    links: [
+      {
+        link: 'https://reelgood.com',
+        description: 'Reelgood Home'
+      },
+      {
+        link: 'https://reelgood.com/about',
+        description: 'Reelgood About Page'
+      }
+    ],
+    photoDescription: 'Reelgood - All your streaming services in one place.'
+  },
+  leanpub: {
+    heading: 'Leanpub',
+    subheading: 'Junior Developer',
+    description: 'I spent eight months as a Junior developer at Ruboss, the Victoria-based company behind Leanpub. I wrote React and Ruby on Rails code for Leanpub and for individual client projects. This is where I cut my teeth on web development.',
+    times: 'April 2016 - December 2016',
+    disciplines: [
+      '_react',
+      'rails',
+      'git',
+      'css'
+    ],
+    slug: 'leanpub',
+    extension: 'png',
+    hasImage: true,
+    links: [
+      {
+        link: 'https://leanpub.com',
+        description: 'Leanpub Home'
+      },
+      {
+        link: 'https://reelgood.com/p',
+        description: 'Leanpub for Publishers'
+      }
+    ],
+    photoDescription: 'Leanpub - A powerful platform for serious authors.'
+  },
+  uvic: {
+    heading: '3rd Year B.Sc.',
+    subheading: 'Mathematics & Computer Science',
+    description: 'I\'m 12 courses away from a degree in Mathematics and Computer Science (combined single major) from UVic. I started at Thompson Rivers University in 2013 as Mathematics major, then transferred to UVic at the end of my 2nd year, and added a Computer Science component to my degree. I\'m most interested in applied mathematics and software engineering.',
+    slug: 'uvic',
+    disciplines: ['school'],
+    times: 'September 2012 - Present',
+    extension: 'png',
+    hasImage: true,
+    photoDescription: 'My courses.',
+    links: []
+  },
+  events: {
+    heading: 'Event Organizing',
+    subheading: 'Global Game Jam, HackUVic',
+    times: 'January 2017, March 2017, March 2018',
+    disciplines: ['css', 'react'],
+    description: 'I\'ve organized a number of successful, sponsor-backed tech events in Victoria. I single-handedly ran Global Game Jam in January 2017 to great fanfare, revitalizing the UVic Game Dev club when club activity was waning. Immediately afterward, I helped the UVic WebDev Club put on HackUVic 2017, building out the website and getting sponsorship on their behalf. In 2018, I\'ve helped organize HackUVic 2018, putting my energy into the website, event design, and raising funds.',
+    slug: 'globalgamejam',
+    extension: 'jpg',
+    hasImage: true,
+    photoDescription: 'The 2017 Victoria Global Game Jam home page.',
+    links: []
+  },
+  interior: {
+    heading: 'North Shuswap',
+    subheading: 'BC Interior',
+    dates: 'May 1994 - September 2015',
+    description: 'I\'m from the North Shuswap, a tiny lakeside community in the BC Interior. Until I was 16 we had no high speed internet, and I would often go out into the woods to collect firewood or to hunt with my brothers and father. I worked on farms and did hedge trimming. I moved to Kamloops for school, and landscaped in the summers. On the third year, I split time between my employer and a side business doing hedge trimming and yard revivals. It was that summer that I had the idea to move to Victoria and try to strike out a living doing software development.',
+    slug: 'interior',
+    extension: 'jpg',
+    photoDescription: 'Garden boxes, fruit trees, and the shop.',
+    hasImage: true,
+    disciplines: ['react'],
+    links: []
+  },
+  globalGameJam: {
+    heading: 'Global Game Jam',
+    subheading: 'Lead Organizer',
+    times: 'November 2016 - January 2017',
+    description: 'Global Game Jam was a game development competition that I organized. I raised some $3000 from local companies and used it to pay for food and beverages for an entire weekend of game development. The event had 30 participants. I built a little brochure website in plain HTML, set up EventBrite for ticket sales, had T-shirts printed, registered a venue, and did everything else to get it off the ground.',
+    slug: 'globalgamejam',
+    extension: 'jpg',
+    hasImage: true,
+    photoDescription: 'The 2017 Victoria Global Game Jam home page.',
+    disciplines: ['css'],
+    links: []
+  },
+  primsAlgorithm: {
+    heading: 'Prims Algorithm',
+    subheading: 'Compute Minimum Spanning Trees',
+    times: 'March 2015',
+    description: 'This is 500 lines of Java that demonstrates what a Minimum Spanning Tree is. A minimum spanning tree is a spanning tree of a weighted-edge graph that provides connectivity from one vertex to every other vertex for a minumum cost. This was the first bit of software that I wrote.',
+    slug: 'primsalgorithm',
+    extension: 'gif',
+    hasImage: true,
+    photoDescription: 'The Java app in use.',
+    disciplines: ['css'],
+    links: [
+      {
+        description: 'Source Code',
+        link: 'https://github.com/louisritchie/prims-algorithm'
+      }
+    ]
+  },
+  hackVictoria: {
+    heading: 'Hack Victoria 2016',
+    subheading: 'UVic Hackathon',
+    times: 'February 2016',
+    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+    hasImage: false,
+    slug: 'hackvictoria',
+    disciplines: ['css'],
+    links: [
+      {
+        description: 'Client source code',
+        link: 'https://github.com/luigiplr/emoji-client'
+      },
+      {
+        description: 'Server source code',
+        link: 'https://github.com/LouisRitchie/vicboard-server'
+      }
+    ]
+  },
+  hackUVic17: {
+    heading: 'Hack Victoria 2016',
+    subheading: 'UVic Hackathon',
+    times: 'February 2016',
+    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+    hasImage: false,
+    slug: 'hackuvic2017',
+    disciplines: ['css'],
+    links: [
+      {
+        description: 'Client source code',
+        link: 'https://github.com/luigiplr/emoji-client'
+      },
+      {
+        description: 'Server source code',
+        link: 'https://github.com/LouisRitchie/vicboard-server'
+      }
+    ]
+  },
+  hackUVic18: {
+    heading: 'Hack Victoria 2016',
+    subheading: 'UVic Hackathon',
+    times: 'February 2016',
+    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+    hasImage: false,
+    slug: 'hackuvic18',
+    disciplines: ['css'],
+    links: [
+      {
+        description: 'Client source code',
+        link: 'https://github.com/luigiplr/emoji-client'
+      },
+      {
+        description: 'Server source code',
+        link: 'https://github.com/LouisRitchie/vicboard-server'
+      }
+    ]
+  },
+  krispyChicken: {
+    heading: 'Chrome Extension',
+    subheading: 'Codename Krispy Chicken',
+    times: 'November 2016',
+    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+    start: 'January 2017',
+    end: 'March 2017',
+    hasImage: true,
+    slug: 'krispychicken',
+    photoDescription: 'It shakes your screen around a bunch!',
+    extension: 'png',
+    disciplines: ['css'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/williamgrosset/krispychicken'
+      }
+    ]
+  }
+}

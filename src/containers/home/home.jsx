@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import ValueProp from 'components/valueProp'
 import './styles.css'
 import { Link } from 'react-router-dom'
-import items from './items.json5'
+import items from 'static/items.json5'
+import homeOrdering from 'static/homeOrdering.json5'
 
 class Home extends Component {
   render() {
@@ -23,14 +24,14 @@ class Home extends Component {
 
         <div className='sectionHeader'>Portfolio</div>
 
-        {items.slice(0,3).map((item, i) => (
-          <ValueProp {...item} index={i} key={item.slug} />
+        {homeOrdering.slice(0,3).map((slug, i) => (
+          <ValueProp {...items[slug]} index={i} key={slug} />
         ))}
 
         <div className='sectionHeader viewPortfolio'><Link to='/portfolio'>View Full Portfolio</Link></div>
 
-        {items.slice(3).map((item, i) => (
-          <ValueProp {...item} index={i} key={item.slug} />
+        {homeOrdering.slice(3).map((slug, i) => (
+          <ValueProp {...items[slug]} index={i} key={slug} />
         ))}
       </div>
     )

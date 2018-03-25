@@ -3,7 +3,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import './styles.css'
 import icons from 'static/icons'
-import timelineItems from './timelineItems.json5'
+import items from 'static/items.json5'
+import timelineOrdering from 'static/timelineOrdering.json5'
 
 class Timeline extends Component {
   // transform the timeline elements into links.
@@ -30,16 +31,16 @@ class Timeline extends Component {
         </div>
 
         <VerticalTimeline>
-          {timelineItems.map(({title, role, description, start, end, discipline}) => (
+          {timelineOrdering.map(slug => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date={`${start} - ${end}`}
+              date={items[slug].dates}
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={icons[discipline]}
+              icon={icons[items[slug].disciplines[0]]}
             >
-              <h3 className="vertical-timeline-element-title">{title}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{role}</h4>
-              <p>{description}</p>
+              <h3 className="vertical-timeline-element-title">{items[slug].heading}</h3>
+              <h4 className="vertical-timeline-element-subtitle">{items[slug].subheading}</h4>
+              <p>{items[slug].description}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
