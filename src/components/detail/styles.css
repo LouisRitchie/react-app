@@ -1,13 +1,12 @@
 .detailPage {
-  max-width: calc(100% - (var(--margin-left)) - 40px);
-  margin: 0;
+  max-width: calc(100% - (var(--margin-left)) * 2 - 40px);
+  margin: 0 0 0 var(--margin-left);
   display: flex;
   flex-flow: column nowrap;
   padding: 20px;
   border: 1px solid black;
   border-radius: 3px;
   box-shadow: 0 3px 0 #aaa;
-  height: 100%;
   width: 100vw;
 }
 
@@ -89,6 +88,7 @@
 }
 
 .noImage {
+  color: #ddd;
   height: 97%;
   display: flex;
   justify-content: center;
@@ -98,6 +98,28 @@
 }
 
 @media(max-width: 750px) {
+  .detailPage {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .detailPageTop {
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .detailPageTop .headers {
+    padding-bottom: 30px;
+  }
+
+  .detailPageTop .headers * {
+    max-width: 80vw;
+  }
+
+  .detailPageTop .headers h3 {
+    line-height: 30px;
+  }
+
   .detailPageBottom .detailLeft {
     display: initial;
     width: initial;

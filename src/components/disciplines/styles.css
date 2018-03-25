@@ -1,4 +1,6 @@
 .disciplines {
+  white-space: nowrap;
+  min-height: 22px;
 }
 
 .disciplines span {

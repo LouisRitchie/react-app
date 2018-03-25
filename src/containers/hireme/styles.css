@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   margin: auto;
+  min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
 .hiremeImage {
@@ -11,7 +12,6 @@
 }
 
 .hiremeText {
-  height: calc(96vh - 40px - 55px);
   padding: 2vh 5vw 2vh 2vw;
   max-width: 600px;
 }
@@ -24,11 +24,11 @@
   .hireme {
     flex-flow: column;
     flex-direction: column-reverse;
+    justify-content: flex-end;
   }
 
   .hiremeText {
     height: auto;
-    min-height: calc(96vh - 40px - 90px);
   }
 
   .hiremeImage {

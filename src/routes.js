@@ -1,6 +1,5 @@
 import Home from 'containers/home'
 import HireMe from 'containers/hireme'
-import DetailPage from 'containers/detailPage'
 import Portfolio from 'containers/portfolio'
 import Timeline from 'containers/timeline'
 import Error from 'containers/error'

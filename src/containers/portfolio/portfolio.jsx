@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import Disciplines from 'components/disciplines'
-import DetailPage from 'containers/detailPage'
+import Detail from 'components/detail'
 import Slider from 'components/slider'
 import items from 'static/items.json5'
 import { resize$ } from 'lib/observables.js'
@@ -48,7 +48,7 @@ class Portfolio extends Component {
 
         <Route key='/portfolio/:slug' path='/portfolio/:slug' render={(props) =>
           (
-            <DetailPage {...props} />
+            <Detail {...props} />
           )} />
 
         <Route exact key='/portfolio' path='/portfolio' render={() =>
@@ -56,7 +56,7 @@ class Portfolio extends Component {
             <div className='portfolioItems'>
               {
                 Object.keys(items).map((slug, i) => (
-                  <Slider once style={this.state.isMobile ? {width: 298, height: 130} : {width: 340, height: 150}} id={slug} startPositionX={i % 2 === 1 ? 40 : 0} startPositionY={i % 2 === 0 ? 40 : 0}>
+                  <Slider once style={this.state.isMobile ? {width: 298, height: 130} : {width: 340, height: 150}} id={slug} startPositionX={1 + 15 * i}>
                     <Link className='portfolioItem' to={`/portfolio/${slug}`}>
                       <h3 className='itemHeading'>{items[slug].heading}</h3>
                       <h4 className='itemSubheading'>{items[slug].subheading}</h4>

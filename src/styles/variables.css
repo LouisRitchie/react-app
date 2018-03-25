@@ -1,7 +1,8 @@
 body {
   --navy: #062035;
   --margin-left: 64px;
-  --margin-top: 55px;
+  --header-height: 55px;
+  --footer-height: 40px;
 
   --p-text-align: initial;
 
@@ -33,7 +34,7 @@ body {
 @media(max-width: 750px) {
   body {
     --margin-left: 16px;
-    --margin-top: 90px;
+    --header-height: 90px;
 
     --p-text-align: justify;
 

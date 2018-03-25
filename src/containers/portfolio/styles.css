@@ -1,5 +1,5 @@
 .portfolioContainer {
-  height: calc(100vh - 40px - 55px);
+  min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
 .portfolio {
@@ -20,7 +20,7 @@
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin-left: var(--margin-left);
 }
 
@@ -69,11 +69,20 @@
 
 @media(max-width: 750px) {
   .portfolioContainer {
-    height: 750px;
+    height: 100%;
+  }
+
+  .portfolio {
+    padding-bottom: 1px;
   }
 
   .portfolio .splash {
     margin-bottom: 0;
+    height: 110px;
+  }
+
+  .portfolioItems {
+    padding-bottom: 60px;
   }
 
   .portfolioItem {

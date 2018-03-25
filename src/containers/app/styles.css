@@ -3,7 +3,7 @@
   margin: auto;
   opacity: 0;
   transition: opacity 0s;
-  margin-top: var(--margin-top);
+  margin-top: var(--header-height);
 }
 
 .lightsOn {
