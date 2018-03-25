@@ -32,6 +32,7 @@
 .title a {
   color: inherit;
   text-decoration: inherit;
+  outline: none;
 }
 
 .nav {
