@@ -2,7 +2,7 @@
   reelgood: {
     heading: 'Reelgood',
     subheading: 'Web Developer',
-    description: 'Reelgood keeps track of your favourite shows and streaming services that youre subscribed to. I was a member of Reelgoods web team for one year. I wrote React code that interacted with tens of APIs, handling user auth and email tokens, data loading, updating user preferences, and so on. I also wrote the playback mechanism. Its a library that takes the users watched episodes and selected services and determines what streaming service to open on a given show when the user hits the play button.',
+    description: 'Reelgood keeps track of your favourite shows and streaming services that you\'re subscribed to. I was a full-time web developer at Reelgood for one year. I mostly wrote frontend components with React and Redux. We used the RXJS library and epics to interact with tens of APIs that provided search results, handled user auth and email tokens, updated user preferences, and so on. I wrote the playback mechanism, a library that takes the user\'s watched episodes and selected services and determines what link to open when the user hits play on a given show episode or movie.',
     times: 'March 2017 - March 2018',
     disciplines: [
       '_react',
@@ -27,7 +27,7 @@
   leanpub: {
     heading: 'Leanpub',
     subheading: 'Junior Developer',
-    description: 'I spent eight months as a Junior developer at Ruboss, the Victoria-based company behind Leanpub. I wrote React and Ruby on Rails code for Leanpub and for individual client projects. This is where I cut my teeth on web development.',
+    description: 'I spent eight months on co-op as a junior dev at Ruboss, the Victoria-based company behind Leanpub. I learned React and Ruby on Rails, and sometimes wrote useful code. This is where I cut my teeth on web development.',
     times: 'April 2016 - December 2016',
     disciplines: [
       '_react',
@@ -66,13 +66,34 @@
     heading: 'Event Organizing',
     subheading: 'Global Game Jam, HackUVic',
     times: 'January 2017, March 2017, March 2018',
-    disciplines: ['css', 'react'],
+    disciplines: ['nginx', 'css', '_react'],
     description: 'I\'ve organized a number of successful, sponsor-backed tech events in Victoria. I single-handedly ran Global Game Jam in January 2017 to great fanfare, revitalizing the UVic Game Dev club when club activity was waning. Immediately afterward, I helped the UVic WebDev Club put on HackUVic 2017, building out the website and getting sponsorship on their behalf. In 2018, I\'ve helped organize HackUVic 2018, putting my energy into the website, event design, and raising funds.',
     slug: 'globalgamejam',
     extension: 'jpg',
     hasImage: true,
     photoDescription: 'The 2017 Victoria Global Game Jam home page.',
-    links: []
+    links: [
+      {
+        description: 'HackUVic 2018 website source code',
+        link: 'https://github.com/uvicwebdev/HackUVic-18w'
+      },
+      {
+        description: 'HackUVic 2018 Website',
+        link: 'http://18w.hackuvic.com'
+      },
+      {
+        description: 'HackUVic 2017 website source code',
+        link: 'https://github.com/uvicwebdev/HackUVic-17w'
+      },
+      {
+        description: 'HackUVic 2017 Website',
+        link: 'http://17w.hackuvic.com'
+      },
+      {
+        description: '2017 Global Game Jam website source code',
+        link: 'https://github.com/louisritchie/victoriaggj_landing'
+      }
+    ]
   },
   interior: {
     heading: 'North Shuswap',
@@ -83,46 +104,51 @@
     extension: 'jpg',
     photoDescription: 'Garden boxes, fruit trees, and the shop.',
     hasImage: true,
-    disciplines: [],
+    disciplines: ['work', 'school'],
     links: []
   },
-  globalGameJam: {
+  ggj: {
     heading: 'Global Game Jam',
     subheading: 'Lead Organizer',
     times: 'November 2016 - January 2017',
     description: 'Global Game Jam was a game development competition that I organized. I raised some $3000 from local companies and used it to pay for food and beverages for an entire weekend of game development. The event had 30 participants. I built a little brochure website in plain HTML, set up EventBrite for ticket sales, had T-shirts printed, registered a venue, and did everything else to get it off the ground.',
     slug: 'globalgamejam',
-    extension: 'jpg',
+    extension: 'png',
     hasImage: true,
     photoDescription: 'The 2017 Victoria Global Game Jam home page.',
-    disciplines: ['css'],
-    links: []
+    disciplines: ['nginx', 'css'],
+    links: [
+      {
+        description: 'Website source code',
+        link: 'https://github.com/louisritchie/victoriaggj_landing'
+      }
+    ]
   },
-  primsAlgorithm: {
+  primsalgorithm: {
     heading: 'Prims Algorithm',
     subheading: 'Compute Minimum Spanning Trees',
     times: 'March 2015',
-    description: 'This is 500 lines of Java that demonstrates what a Minimum Spanning Tree is. A minimum spanning tree is a spanning tree of a weighted-edge graph that provides connectivity from one vertex to every other vertex for a minumum cost. This was the first bit of software that I wrote.',
+    description: 'This is 500 lines of Java that demonstrates what a Minimum Spanning Tree (MST) is. It\'s a GUI app using the Swing library. I wanted drag-and-drop functionality, so I gave every edge and vertex a clickable area, and gave it intuitive selection of multiple vertices. The app will compute a MST based on the graph your drew. A MST is a spanning tree of a weighted-edge graph for a given root vertex, that has a minimally expensive path from root to every other vertex. This was the first piece of software that I wrote.',
     slug: 'primsalgorithm',
     extension: 'gif',
     hasImage: true,
     photoDescription: 'The Java app in use.',
-    disciplines: ['css'],
+    disciplines: ['java'],
     links: [
       {
         description: 'Source Code',
-        link: 'https://github.com/louisritchie/prims-algorithm'
+        link: 'https://github.com/louisritchie/Prims_Algorithm'
       }
     ]
   },
-  hackVictoria: {
+  hackvictoria: {
     heading: 'Hack Victoria 2016',
     subheading: 'UVic Hackathon',
     times: 'February 2016',
     description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
     hasImage: false,
     slug: 'hackvictoria',
-    disciplines: ['css'],
+    disciplines: ['_react', 'css'],
     links: [
       {
         description: 'Client source code',
@@ -134,45 +160,45 @@
       }
     ]
   },
-  hackUVic17: {
-    heading: 'Hack Victoria 2016',
-    subheading: 'UVic Hackathon',
-    times: 'February 2016',
-    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+  hackuvic17: {
+    heading: 'HackUVic 2017',
+    subheading: 'Co-lead organizer',
+    times: 'January 2017 - March 2017',
+    description: 'I co-organized HackUVic 2017 with members of the UVic WebDev club. I helped raise funds, maintained our web presence, handled T-shirt printing, handled food, bought prizes, and mentored teams.',
     hasImage: false,
-    slug: 'hackuvic2017',
-    disciplines: ['css'],
+    slug: 'hackuvic17',
+    disciplines: ['_react', 'css'],
     links: [
       {
-        description: 'Client source code',
-        link: 'https://github.com/luigiplr/emoji-client'
+        description: 'Website source code',
+        link: 'https://github.com/uvicwebdev/HackUVic-17w'
       },
       {
-        description: 'Server source code',
-        link: 'https://github.com/LouisRitchie/vicboard-server'
+        description: 'HackUVic 2017 Website',
+        link: 'http://17w.hackuvic.com'
       }
     ]
   },
-  hackUVic18: {
-    heading: 'Hack Victoria 2016',
-    subheading: 'UVic Hackathon',
-    times: 'February 2016',
-    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+  hackuvic18: {
+    heading: 'HackUVic 2018',
+    subheading: 'Co-lead organizer',
+    times: 'January 2018 - March 2018',
+    description: 'I co-organized HackUVic 2018 with members of the UVic WebDev club, as in previous years. I helped raise funds, maintained our web presence, handled T-shirt printing, handled food, bought prizes, and mentored teams.',
     hasImage: false,
     slug: 'hackuvic18',
-    disciplines: ['css'],
+    disciplines: ['_react', 'css'],
     links: [
       {
-        description: 'Client source code',
-        link: 'https://github.com/luigiplr/emoji-client'
+        description: 'Website source code',
+        link: 'https://github.com/uvicwebdev/HackUVic-18w'
       },
       {
-        description: 'Server source code',
-        link: 'https://github.com/LouisRitchie/vicboard-server'
+        description: 'HackUVic 2018 Website',
+        link: 'http://18w.hackuvic.com'
       }
     ]
   },
-  krispyChicken: {
+  krispychicken: {
     heading: 'Chrome Extension',
     subheading: 'Codename Krispy Chicken',
     times: 'November 2016',
@@ -183,11 +209,40 @@
     slug: 'krispychicken',
     photoDescription: 'It shakes your screen around a bunch!',
     extension: 'png',
-    disciplines: ['css'],
+    disciplines: ['node', 'css'],
     links: [
       {
         description: 'Source code',
         link: 'https://github.com/williamgrosset/krispychicken'
+      }
+    ]
+  },
+  cppsnake: {
+    heading: 'C++ Battlesnake',
+    subheading: 'Using Monte-Carlo tree search',
+    times: 'March 2018',
+    description: 'This is an AI that I wrote for Battlesnake 2018. It receives a board state and then uses Monte Carlo tree search (with UCB1-Tuned selection policy) to decide on the next move. The snake is written in C++, and was the second snake I made in 2018. The first snake I coded was in Lua. I knew Lua was fast thanks to Mike Palls LuaJIT, but after looking at some benchmarks and seeing that C++ was actually hundreds of times faster, I knew that I needed to switch languages. In my code, I make heavy use of the Boost Graph Library and a JSON library. I expose the snake as a FastCGI app on port 88. Check the repository for build/deploy details.',
+    hasImage: false,
+    slug: 'cppsnake',
+    disciplines: ['cpp', 'nginx'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/louisritchie/snake'
+      }
+    ]
+  },
+  luasnake: {
+    heading: 'Lua Battlesnake',
+    subheading: 'Strategy: Avoid death.',
+    times: 'Februrary 2018',
+    description: 'This snake was the precursor to my C++ Battlesnake. I intended to write a Lua Battlesnake that used Minimax to handle decision making, so I implemented the avoid-walls-and-other-snakes functionality and then turned my focus to the algorithm. My research revealed that Minimax is not ideal, as it is designed for sequential turn games; Battlesnake is a simultaneous turn game, like rock-paper-scissors - Just try in your head to do Minimax on rock-paper-scissors. At this point, I dropped Minimax, picked up Monte-Carlo tree search, and started implementing a new snake in C++.',
+    slug: 'luasnake',
+    disciplines: ['lua', 'nginx'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/louisritchie/luasnake'
       }
     ]
   }

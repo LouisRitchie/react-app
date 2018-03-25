@@ -66,16 +66,17 @@ class DetailPage extends Component {
             <div className='detailTitle'>Relevance</div>
             <p className='detailPageDescription'>{description}</p>
           </div>
-          <div className='detailRight'>
+          { links.length > 0 && <div className='detailRight'>
             <div className='detailTitle'>Links of Note</div>
-            <ol>
-              {links.map(({link, description}) => (
-                <li>
-                  <a href={link}>{description}</a>
-                </li>
-              ))}
-            </ol>
-          </div>
+              <ol>
+                {links.map(({link, description}) => (
+                  <li>
+                    <a href={link}>{description}</a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          }
         </div>
       </div>
     )

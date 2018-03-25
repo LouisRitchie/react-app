@@ -79,7 +79,7 @@
   .valueProp {
     flex-flow: column nowrap;
     justify-content: flex-start;
-    padding: 40px 0 calc(var(--slider-container-height) + 60px);
+    padding: 40px 0 calc(var(--slider-container-height) + 120px);
     margin: 0 6px;
   }
 

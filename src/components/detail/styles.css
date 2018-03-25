@@ -59,7 +59,6 @@
   display: inline-block;
   float: left;
   padding-right: 6%;
-  border-right: 1px solid #ddd;
   width: 45%;
 }
 
@@ -67,6 +66,8 @@
   display: inline-block;
   padding-left: 3%;
   width: 45%;
+  border-left: 1px solid #ddd;
+  height: 100%
 }
 
 .detailTitle {
@@ -90,6 +91,7 @@
 .noImage {
   color: #ddd;
   height: 97%;
+  min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;

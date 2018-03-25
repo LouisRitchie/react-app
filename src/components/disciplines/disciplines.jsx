@@ -10,6 +10,7 @@ const displayNames = {
   git: 'Git',
   javascript: 'Javascript',
   java: 'Java',
+  lua: 'Lua',
   nginx: 'NGINX',
   node: 'Node',
   _react: 'React',

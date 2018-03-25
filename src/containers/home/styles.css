@@ -103,7 +103,7 @@
   width: calc(50% - 140px);
   height: 2px;
   background: black;
-  top: 28px;
+  top: 50%;
 }
 
 .sectionHeader:after {
@@ -148,9 +148,8 @@
     margin: 20px auto 20px;
   }
 
-  .sectionHeader:before,
-  .sectionHeader:after {
-    width: calc(50% - 100px);
-    top: 20px;
+  .sectionHeader.viewPortfolio:before,
+  .sectionHeader.viewPortfolio:after {
+    width: calc(50% - 200px);
   }
 }
