@@ -33,7 +33,7 @@ class Disciplines extends Component {
           this.props.disciplines.map(slug => (
             <span>
               {icons[slug]}&nbsp;
-              <span>{displayNames[slug]}&nbsp;</span>
+              <span><em>{displayNames[slug]}</em>&nbsp;</span>
             </span>
           ))
         }

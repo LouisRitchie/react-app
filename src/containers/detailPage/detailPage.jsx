@@ -32,7 +32,7 @@ class DetailPage extends Component {
               <h1>{heading}</h1>
               <h3>{subheading}</h3>
               <div className='times'>{times}</div>
-              <Disciplines disciplines={disciplines} />
+              <span><em>Technologies:</em></span><Disciplines disciplines={disciplines} />
             </div>
             <div className='photoWrapper'>
               <img
@@ -51,7 +51,7 @@ class DetailPage extends Component {
               <ol>
                 {links.map(({link, description}) => (
                   <li>
-                    <Link to={link}>{description}</Link>
+                    <a href={link}>{description}</a>
                   </li>
                 ))}
               </ol>

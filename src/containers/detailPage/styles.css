@@ -80,3 +80,9 @@
 .detailPage ol {
   font-size: 14px;
 }
+
+.detailPage .headers > span {
+  line-height: 20px;
+  font-weight: 100;
+  font-size: 15px;
+}
