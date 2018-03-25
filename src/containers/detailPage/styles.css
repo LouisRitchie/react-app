@@ -25,6 +25,10 @@
 
 }
 
+.detailPage .photo {
+  width: 50vw;
+}
+
 .detailPageBottom {
   margin-top: 20px;
 }

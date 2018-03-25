@@ -14,6 +14,7 @@ class Portfolio extends Component {
         <div className='splash'>
           <div className='splashHeading'>
             <h1>Portfolio</h1>
+            {this.props.match.params.slug && <h3 onClick={this.props.history.goBack} className='backButton'>{'<< Go Back'}</h3>}
           </div>
         </div>
 

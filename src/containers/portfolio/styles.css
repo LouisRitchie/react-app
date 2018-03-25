@@ -1,6 +1,5 @@
 .portfolioContainer {
   height: calc(100vh - 40px - 55px);
-  height: 5000px;
 }
 
 .portfolio {
@@ -11,6 +10,10 @@
   background: var(--linear-gradient-2);
   height: 120px;
   margin-bottom: 30px;
+}
+
+.portfolio .splash h3 {
+  cursor: pointer;
 }
 
 .portfolioItems {
@@ -57,4 +60,9 @@
   border-color: black;
   box-shadow: 0 3px 0 #aaa;
   transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.backButton {
+  font-size: 12px;
+  color: black;
 }

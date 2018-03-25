@@ -25,7 +25,7 @@ class DetailPage extends Component {
     const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug } = this.state
 
     return (
-      <Slider id={slug} startPositionX={100}>
+      <Slider style={{marginLeft: 'var(--margin-left)'}} id={slug} startPositionX={100}>
         <div className='detailPage'>
           <div className='detailPageTop'>
             <div className='headers'>

@@ -57,13 +57,17 @@
 
 .textContainer {
   display: flex;
-  flex-flow: column nowrap;   
+  flex-flow: column nowrap;
   justify-content: center;
 }
 
 .text {
   margin-bottom: var(--value-prop-text-margin-bottom);
   max-width: 550px;
+}
+
+.valueProp .photo {
+  max-width: 100%;
 }
 
 @media(max-width: 750px) {
@@ -85,5 +89,10 @@
   .valueProp .textContainer {
     height: auto;
     text-align: center;
+  }
+
+  .valueProp .photo {
+    max-width: calc(100% - 12px);
+    margin-left: 6px;
   }
 }
