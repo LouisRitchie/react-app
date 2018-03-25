@@ -70,6 +70,11 @@
   max-width: 100%;
 }
 
+.valueProp a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media(max-width: 750px) {
   .valueProp {
     flex-flow: column nowrap;

@@ -110,13 +110,13 @@
   left: 25px;
 }
 
-.sectionHeader:last-child {
-  padding-bottom: 20px;
-  margin-bottom: 0;
+.sectionHeader.viewPortfolio {
+  margin: 100px auto;
+  text-decoration: underline;
 }
 
-.sectionHeader:last-child:before,
-.sectionHeader:last-child:after {
+.sectionHeader.viewPortfolio:before,
+.sectionHeader.viewPortfolio:after {
   width: calc(50% - 240px);
 }
 

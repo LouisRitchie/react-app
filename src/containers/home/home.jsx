@@ -23,11 +23,15 @@ class Home extends Component {
 
         <div className='sectionHeader'>Portfolio</div>
 
-        {items.map((item, i) => (
+        {items.slice(0,3).map((item, i) => (
           <ValueProp {...item} index={i} key={item.slug} />
         ))}
 
-        <div className='sectionHeader'><Link to='/portfolio'>View Full Portfolio</Link></div>
+        <div className='sectionHeader viewPortfolio'><Link to='/portfolio'>View Full Portfolio</Link></div>
+
+        {items.slice(3).map((item, i) => (
+          <ValueProp {...item} index={i} key={item.slug} />
+        ))}
       </div>
     )
   }

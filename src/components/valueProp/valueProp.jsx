@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import Slider from 'components/slider'
 import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
@@ -48,7 +49,7 @@ class ValueProp extends Component {
       <section className={`valueProp ${index % 2 !== 0 ? 'reverse' : ''}`}>
         <div className='textContainer'>
           <div className='text'>
-            <h1>{heading}</h1>
+            <h1><Link to={`/portfolio/${slug}`}>{heading}</Link></h1>
             <h2>{subheading}</h2>
             <p>{description}</p>
           </div>
