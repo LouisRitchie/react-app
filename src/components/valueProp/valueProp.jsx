@@ -42,7 +42,7 @@ class ValueProp extends Component {
   }
 
   render() {
-    const { description, index, heading, photoDescription, subheading, slug } = this.props
+    const { description, index, heading, photoDescription, subheading, slug, extension } = this.props
     const { isMobile } = this.state
 
     return (
@@ -57,7 +57,7 @@ class ValueProp extends Component {
         <Slider style={isMobile ? {width: '90vw'} : {width: '40vw'}} id={slug} startPositionY={300}>
           <img
             className='photo'
-            src={require(`static/images/${slug}.png`)} />
+            src={require(`static/images/${slug}.${extension}`)} />
           <p className='boxText'>{photoDescription}</p>
         </Slider>
       </section>
