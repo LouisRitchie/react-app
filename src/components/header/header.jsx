@@ -13,7 +13,7 @@ class Header extends Component {
             <Link
               key={route.path}
               to={route.path}
-              className={`navItem ${window.location.pathname === route.path ? 'selected' : ''}`}>
+              className={`navItem ${window.location.pathname.split('/')[1] === route.path.split('/')[1] ? 'selected' : ''}`}>
               {route.name}
             </Link>
           ))}
