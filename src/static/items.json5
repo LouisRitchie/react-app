@@ -98,7 +98,7 @@
   interior: {
     heading: 'North Shuswap',
     subheading: 'BC Interior',
-    dates: 'May 1994 - September 2015',
+    times: 'May 1994 - September 2015',
     description: 'I\'m from the North Shuswap, a tiny lakeside community in the BC Interior. Until I was 16 we had no high speed internet, and I would often go out into the woods to collect firewood or to hunt with my brothers and father. I worked on farms and did hedge trimming. I moved to Kamloops for school, and landscaped in the summers. On the third year, I split time between my employer and a side business doing hedge trimming and yard revivals. It was that summer that I had the idea to move to Victoria and try to strike out a living doing software development.',
     slug: 'interior',
     extension: 'jpg',

@@ -108,6 +108,7 @@
   .detailPageTop {
     flex-flow: column;
     justify-content: space-between;
+    min-height: 360px;
   }
 
   .detailPageTop .headers {
@@ -116,16 +117,23 @@
 
   .detailPageTop .headers * {
     max-width: 80vw;
+    min-height: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .detailPageTop .headers h3 {
     line-height: 30px;
   }
 
+  .detailPageTop .headers h1 {
+    margin-bottom: -16px;
+  }
+
   .detailPageBottom .detailLeft {
     display: initial;
     width: initial;
-    border: none;
     padding-right: 0;
   }
 
@@ -133,5 +141,6 @@
     display: initial;
     width: initial;
     padding-left: 0;
+    border: none;
   }
 }
