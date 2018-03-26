@@ -26,8 +26,6 @@ class Slider extends Component {
   constructor({startPositionX, startPositionY}) {
     super()
 
-    console.log(startPositionX, startPositionY)
-
     let startPosition = 0
     let axis = 0 // 0 is x axis, 1 is Y axis
     let coefficient = 1 // when 0, we have arrived at resting position

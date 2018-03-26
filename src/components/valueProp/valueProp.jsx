@@ -18,7 +18,7 @@ class ValueProp extends Component {
   }
 
   state = {
-    isMobile: false
+    isMobile: void 0
   }
 
   componentDidMount() {
@@ -42,8 +42,13 @@ class ValueProp extends Component {
   }
 
   render() {
-    const { description, index, heading, photoDescription, subheading, slug, extension } = this.props
     const { isMobile } = this.state
+
+    if (isMobile === void 0) { // dont mount children until we know if mobile or not
+      return null
+    }
+
+    const { description, index, heading, photoDescription, subheading, slug, extension } = this.props
 
     return (
       <section className={`valueProp ${index % 2 !== 0 ? 'reverse' : ''}`}>
@@ -54,7 +59,7 @@ class ValueProp extends Component {
             <p>{description}</p>
           </div>
         </div>
-        <Slider style={isMobile ? {width: '90vw'} : {width: '40vw'}} id={slug} startPositionY={300}>
+        <Slider style={isMobile ? {width: '90vw'} : {width: '40vw'}} id={slug} startPositionY={isMobile ? 120 : 300}>
           <img
             className='photo'
             src={require(`static/images/${slug}.${extension}`)} />
