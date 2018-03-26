@@ -22,11 +22,11 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        use: ['file-loader', 'image-webpack-loader']
+        use: ['file-loader']
       },
       {
         test: /\.gif$/,
-        use: ['file-loader', 'image-webpack-loader']
+        use: ['file-loader']
       },
       {
         test: /\.jpg$/,

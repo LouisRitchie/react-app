@@ -1,3 +1,25 @@
+# Portfolio website of Louis Ritchie
+
+This is my portfolio website.
+
+`npm i`
+`npm start`
+
+## Deploy on Ubuntu 16.04
+
+I'm deploying this on a Ubuntu 16.04 digital ocean droplet using Nginx. I had some trouble getting the node modules installed and working.
+
+During `npm i` I ran across error `mozjpeg pre-build test failed`. Using `apt-get`, install `pkg-config`, `dh-autoreconf`, `nasm` and `npm i` to fix. However I don't think fixing this is necessary for webpack to successfully build.
+
+Using `image-webpack-loader` does cause webpack build to error. I think it might be because all of the images are already 
+compressed and optimized with tinypng (online png & jpg optimizing utility) and `image-webpack-loader` is less robust at handling that... Not sure. Doesn't seem to happen on the development machine.
+
+## You want this?
+
+Modify the titles in `public/index.html`, update the favicon, update `static/images`, and then go to town on `items.json` to fill in data about yourself. I have included about 20 icons but you can find more at http://konpa.github.io/devicon/.
+
+# create-react-app default readme
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
