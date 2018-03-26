@@ -34,10 +34,10 @@ class ValueProp extends Component {
   _checkIfMobile = () => {
     if (this.state.isMobile && document.documentElement.clientWidth > 750) {
       return this.setState({ isMobile: false })
-    }
-
-    if (!this.state.isMobile && document.documentElement.clientWidth < 750) {
+    } else if (!this.state.isMobile && document.documentElement.clientWidth < 750) {
       return this.setState({ isMobile: true })
+    } else if (this.state.isMobile === void 0 && document.documentElement.clientWidth > 750) {
+      return this.setState({ isMobile: false })
     }
   }
 
