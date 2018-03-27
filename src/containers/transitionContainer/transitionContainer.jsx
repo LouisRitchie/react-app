@@ -11,7 +11,10 @@ class TransitionContainer extends Component {
     hitLightSwitch: PropTypes.func.isRequired
   }
 
-  componentDidMount = () => setTimeout(this.props.hitLightSwitch, 200)
+  componentDidMount = () => {
+    window.scrollTo(0, 0)
+    setTimeout(this.props.hitLightSwitch, 200)
+  }
 
   componentWillUnmount = () => this.props.hitLightSwitch()
 
