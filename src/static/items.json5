@@ -2,7 +2,7 @@
   reelgood: {
     heading: 'Reelgood',
     subheading: 'Web Developer',
-    description: 'Reelgood keeps track of your favourite shows and streaming services that you\'re subscribed to. I was a full-time web developer at Reelgood for one year. I mostly wrote frontend components with React and Redux. We used the RXJS library and epics to interact with tens of APIs that provided search results, handled user auth and email tokens, updated user preferences, and so on. I wrote the playback mechanism, a library that takes the user\'s watched episodes and selected services and determines what link to open when the user hits play on a given show episode or movie.',
+    description: 'Reelgood keeps track of your favourite shows and streaming services that you\'re subscribed to. I was a full-time web developer at Reelgood for one year. I mostly wrote front end components with React and Redux. We used the RXJS library and epics to interact with tens of APIs that provided search results, handled user auth and email tokens, updated user preferences, and so on. I wrote the playback mechanism, a library that takes the user\'s watched episodes and selected services and determines what link to open when the user hits play on a given show episode or movie.',
     times: 'March 2017 - March 2018',
     disciplines: [
       '_react',
@@ -202,7 +202,7 @@
     heading: 'Chrome Extension',
     subheading: 'Codename Krispy Chicken',
     times: 'November 2016',
-    description: 'This was a hackathon that my team placed 2nd in. We built a social app that had a Google Maps integration that allowed you to place emojis on the map. One year later, one of my team members started working at Reelgood, and offered me a job there.',
+    description: 'This is a Chrome extension built by myself and William Grosset for Hack Some Crap in 2016. Hack Some Crap was a hackathon with a theme of building stuff that was impractical or useless, which contrasts with the standard hackathon theme. Our submitted Chrome Extension took the elements of the webpage you were on, replaced images with pictures of fried chicken, and then shook the page about while shifting the background through a range of colours.',
     start: 'January 2017',
     end: 'March 2017',
     hasImage: true,
