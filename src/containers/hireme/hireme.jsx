@@ -33,7 +33,7 @@ class HireMe extends Component {
           </p>
 
           <p className='sellParagraph'>
-            <a href='http://louisritchie/resume.pdf'>Resume (2018)</a>
+            <a href='http://louisritchie.com/resume.pdf'>Resume (2018)</a>
           </p>
         </div>
       </div>
