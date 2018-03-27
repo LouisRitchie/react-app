@@ -1,5 +1,6 @@
 .portfolioContainer {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
+  max-width: 100vw;
 }
 
 .portfolio {
