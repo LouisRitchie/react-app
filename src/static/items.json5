@@ -62,6 +62,71 @@
     photoDescription: 'My courses.',
     links: []
   },
+  cppsnake: {
+    heading: 'C++ Battlesnake',
+    subheading: 'Using Monte-Carlo tree search',
+    times: 'March 2018',
+    description: 'This is an AI that I wrote for Battlesnake 2018. It receives a board state and then uses Monte Carlo tree search (with UCB1-Tuned selection policy) to decide on the next move. The snake is written in C++, and was the second snake I made in 2018. The first snake I coded was in Lua. I knew Lua was fast thanks to Mike Palls LuaJIT, but after looking at some benchmarks and seeing that C++ was actually hundreds of times faster, I knew that I needed to switch languages. In my code, I make heavy use of the Boost Graph Library and a JSON library. I expose the snake as a FastCGI app on port 88. Check the repository for build/deploy details.',
+    hasImage: false,
+    slug: 'cppsnake',
+    disciplines: ['cpp', 'nginx'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/louisritchie/snake'
+      }
+    ]
+  },
+  luasnake: {
+    heading: 'Lua Battlesnake',
+    subheading: 'Strategy: Avoid death.',
+    times: 'Februrary 2018',
+    description: 'This snake was the precursor to my C++ Battlesnake. I intended to write a Lua Battlesnake that used Minimax to handle decision making, so I implemented the avoid-walls-and-other-snakes functionality and then turned my focus to the algorithm. My research revealed that Minimax is not ideal, as it is designed for sequential turn games; Battlesnake is a simultaneous turn game, like rock-paper-scissors - Just try in your head to do Minimax on rock-paper-scissors. At this point, I dropped Minimax, picked up Monte-Carlo tree search, and started implementing a new snake in C++.',
+    slug: 'luasnake',
+    disciplines: ['lua', 'nginx'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/louisritchie/luasnake'
+      }
+    ]
+  },
+  primsalgorithm: {
+    heading: 'Prims Algorithm',
+    subheading: 'Compute Minimum Spanning Trees',
+    times: 'March 2015',
+    description: 'This is 500 lines of Java that demonstrates what a Minimum Spanning Tree (MST) is. It\'s a GUI app using the Swing library. I wanted drag-and-drop functionality, so I gave every edge and vertex a clickable area, and gave it intuitive selection of multiple vertices. The app will compute a MST based on the graph your drew. A MST is a spanning tree of a weighted-edge graph for a given root vertex, that has a minimally expensive path from root to every other vertex. This was the first piece of software that I wrote.',
+    slug: 'primsalgorithm',
+    extension: 'gif',
+    hasImage: true,
+    photoDescription: 'The Java app in use.',
+    disciplines: ['java'],
+    links: [
+      {
+        description: 'Source Code',
+        link: 'https://github.com/louisritchie/Prims_Algorithm'
+      }
+    ]
+  },
+  krispychicken: {
+    heading: 'Chrome Extension',
+    subheading: 'Codename Krispy Chicken',
+    times: 'November 2016',
+    description: 'This is a Chrome extension built by myself and William Grosset for Hack Some Crap in 2016. Hack Some Crap was a hackathon with a theme of building stuff that was impractical or useless, which contrasts with the standard hackathon theme. Our submitted Chrome Extension took the elements of the webpage you were on, replaced images with pictures of fried chicken, and then shook the page about while shifting the background through a range of colours.',
+    start: 'January 2017',
+    end: 'March 2017',
+    hasImage: true,
+    slug: 'krispychicken',
+    photoDescription: 'It shakes your screen around a bunch!',
+    extension: 'png',
+    disciplines: ['node', 'css'],
+    links: [
+      {
+        description: 'Source code',
+        link: 'https://github.com/williamgrosset/krispychicken'
+      }
+    ]
+  },
   events: {
     heading: 'Event Organizing',
     subheading: 'Global Game Jam, HackUVic',
@@ -95,18 +160,6 @@
       }
     ]
   },
-  interior: {
-    heading: 'North Shuswap',
-    subheading: 'BC Interior',
-    times: 'May 1994 - September 2015',
-    description: 'I\'m from the North Shuswap, a tiny lakeside community in the BC Interior. Until I was 16 we had no high speed internet, and I would often go out into the woods to collect firewood or to hunt with my brothers and sister. I worked on farms and did hedge trimming. I moved to Kamloops for school, and landscaped in the summers. On the third year, I split time between my employer and a side business doing hedge trimming and yard revivals. It was that summer that I had the idea to move to Victoria and try to strike out a living doing software development.',
-    slug: 'interior',
-    extension: 'jpg',
-    photoDescription: 'Garden boxes, fruit trees, and the shop.',
-    hasImage: true,
-    disciplines: ['work', 'school'],
-    links: []
-  },
   ggj: {
     heading: 'Global Game Jam',
     subheading: 'Lead Organizer',
@@ -121,23 +174,6 @@
       {
         description: 'Website source code',
         link: 'https://github.com/louisritchie/victoriaggj_landing'
-      }
-    ]
-  },
-  primsalgorithm: {
-    heading: 'Prims Algorithm',
-    subheading: 'Compute Minimum Spanning Trees',
-    times: 'March 2015',
-    description: 'This is 500 lines of Java that demonstrates what a Minimum Spanning Tree (MST) is. It\'s a GUI app using the Swing library. I wanted drag-and-drop functionality, so I gave every edge and vertex a clickable area, and gave it intuitive selection of multiple vertices. The app will compute a MST based on the graph your drew. A MST is a spanning tree of a weighted-edge graph for a given root vertex, that has a minimally expensive path from root to every other vertex. This was the first piece of software that I wrote.',
-    slug: 'primsalgorithm',
-    extension: 'gif',
-    hasImage: true,
-    photoDescription: 'The Java app in use.',
-    disciplines: ['java'],
-    links: [
-      {
-        description: 'Source Code',
-        link: 'https://github.com/louisritchie/Prims_Algorithm'
       }
     ]
   },
@@ -198,52 +234,16 @@
       }
     ]
   },
-  krispychicken: {
-    heading: 'Chrome Extension',
-    subheading: 'Codename Krispy Chicken',
-    times: 'November 2016',
-    description: 'This is a Chrome extension built by myself and William Grosset for Hack Some Crap in 2016. Hack Some Crap was a hackathon with a theme of building stuff that was impractical or useless, which contrasts with the standard hackathon theme. Our submitted Chrome Extension took the elements of the webpage you were on, replaced images with pictures of fried chicken, and then shook the page about while shifting the background through a range of colours.',
-    start: 'January 2017',
-    end: 'March 2017',
+  interior: {
+    heading: 'North Shuswap',
+    subheading: 'BC Interior',
+    times: 'May 1994 - September 2015',
+    description: 'I\'m from the North Shuswap, a tiny lakeside community in the BC Interior. Until I was 16 we had no high speed internet, and I would often go out into the woods to collect firewood or to hunt with my brothers and sister. I worked on farms and did hedge trimming. I moved to Kamloops for school, and landscaped in the summers. On the third year, I split time between my employer and a side business doing hedge trimming and yard revivals. It was that summer that I had the idea to move to Victoria and try to strike out a living doing software development.',
+    slug: 'interior',
+    extension: 'jpg',
+    photoDescription: 'Garden boxes, fruit trees, and the shop.',
     hasImage: true,
-    slug: 'krispychicken',
-    photoDescription: 'It shakes your screen around a bunch!',
-    extension: 'png',
-    disciplines: ['node', 'css'],
-    links: [
-      {
-        description: 'Source code',
-        link: 'https://github.com/williamgrosset/krispychicken'
-      }
-    ]
-  },
-  cppsnake: {
-    heading: 'C++ Battlesnake',
-    subheading: 'Using Monte-Carlo tree search',
-    times: 'March 2018',
-    description: 'This is an AI that I wrote for Battlesnake 2018. It receives a board state and then uses Monte Carlo tree search (with UCB1-Tuned selection policy) to decide on the next move. The snake is written in C++, and was the second snake I made in 2018. The first snake I coded was in Lua. I knew Lua was fast thanks to Mike Palls LuaJIT, but after looking at some benchmarks and seeing that C++ was actually hundreds of times faster, I knew that I needed to switch languages. In my code, I make heavy use of the Boost Graph Library and a JSON library. I expose the snake as a FastCGI app on port 88. Check the repository for build/deploy details.',
-    hasImage: false,
-    slug: 'cppsnake',
-    disciplines: ['cpp', 'nginx'],
-    links: [
-      {
-        description: 'Source code',
-        link: 'https://github.com/louisritchie/snake'
-      }
-    ]
-  },
-  luasnake: {
-    heading: 'Lua Battlesnake',
-    subheading: 'Strategy: Avoid death.',
-    times: 'Februrary 2018',
-    description: 'This snake was the precursor to my C++ Battlesnake. I intended to write a Lua Battlesnake that used Minimax to handle decision making, so I implemented the avoid-walls-and-other-snakes functionality and then turned my focus to the algorithm. My research revealed that Minimax is not ideal, as it is designed for sequential turn games; Battlesnake is a simultaneous turn game, like rock-paper-scissors - Just try in your head to do Minimax on rock-paper-scissors. At this point, I dropped Minimax, picked up Monte-Carlo tree search, and started implementing a new snake in C++.',
-    slug: 'luasnake',
-    disciplines: ['lua', 'nginx'],
-    links: [
-      {
-        description: 'Source code',
-        link: 'https://github.com/louisritchie/luasnake'
-      }
-    ]
+    disciplines: ['work', 'school'],
+    links: []
   }
 }
