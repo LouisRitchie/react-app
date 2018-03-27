@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 class HireMe extends Component {
@@ -29,6 +30,10 @@ class HireMe extends Component {
 
           <p className='sellParagraph'>
             Do you have one? Let's get in touch: <a href="mailto:louiscritchie@gmail.com?Subject=I want a beautiful app!" target="_top">louiscritchie@gmail.com</a>
+          </p>
+
+          <p className='sellParagraph'>
+            <a href='http://louisritchie/resume.pdf'>Resume (2018)</a>
           </p>
         </div>
       </div>
