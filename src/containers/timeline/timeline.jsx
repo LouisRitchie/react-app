@@ -34,7 +34,7 @@ class Timeline extends Component {
           {timelineOrdering.map(slug => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              date={items[slug].dates}
+              date={items[slug].times}
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={icons[items[slug].disciplines[0]]}
             >
