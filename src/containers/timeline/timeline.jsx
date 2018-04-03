@@ -16,7 +16,7 @@ class Timeline extends Component {
         break
       }
 
-      elements[i].setAttribute('data-slug', 'reelgood')
+      elements[i].setAttribute('data-slug', items[timelineOrdering[i]].slug)
       elements[i].addEventListener('click', ({currentTarget: {dataset: {slug}}}) => this.props.history.push(`portfolio/${slug}`))
     }
   }
