@@ -42,17 +42,14 @@ function startExpress(port) {
   })
 
   app.get('*.(png|jpg|gif)', function (req, res) {
-    console.log('here')
     res.sendFile(path.join(DIST_DIR, `/${req.path.split('/')[req.path.split('/').length - 1]}`))
   })
 
   app.get('*.pdf', function (req, res) {
-    console.log('here')
     res.sendFile(path.join(DIST_DIR, req.path))
   })
 
   app.get('/(*|*/*)', function (req, res) {
-    console.log('bottom')
     res.sendFile(path.join(PUBLIC_DIR, 'index.html'))
   })
 
