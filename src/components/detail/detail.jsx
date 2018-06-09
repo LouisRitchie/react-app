@@ -43,8 +43,6 @@ class DetailPage extends Component {
   render() {
     const { description, heading, subheading, times, disciplines, links, photoDescription, isMobile, slug, extension, hasImage } = this.state
 
-    console.log(disciplines)
-
     return (
       <div className='detailPage'>
         <div className='detailPageTop'>

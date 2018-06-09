@@ -1,4 +1,30 @@
 {
+  covault: {
+    heading: 'Covault',
+    subheading: 'Frontend Web Developer',
+    description: 'I am one of two developrs building the front end of the Covault application. I have written a majority of the frontend. My senior Ryan Barber covers infrastructure, authentication, and multiplying my effectiveness. I occasionally write Elixir. Covault is a product that connects powersports dealerships to co-op marketing funds maintained by the brands whose products they sell. It provides brands with a way to approve and deny ads that dealerships wish to produce. Finally, it manages media buying campaigns using varied online advertising services.',
+    times: 'April 2018 - Present',
+    disciplines: [
+      '_react',
+      'elixir',
+      'git',
+      'css'
+    ],
+    slug: 'covault',
+    extension: 'jpg',
+    hasImage: true,
+    links: [
+      {
+        link: 'http://go.covaultinc.com',
+        description: 'Covault Home'
+      },
+      {
+        link: 'https://staging.covaultapp.com',
+        description: 'Covault App Staging'
+      }
+    ],
+    photoDescription: 'Covault connects dealerships to co-op funds and to media buying campaigns.'
+  },
   reelgood: {
     heading: 'Reelgood',
     subheading: 'Web Developer',
