@@ -29,7 +29,7 @@ class HireMe extends Component {
           <h2>I'm looking for new projects!</h2>
 
           <p className='sellParagraph'>
-            Do you have one? Let's get in touch: <a href="mailto:louiscritchie@gmail.com?Subject=I want a beautiful app!" target="_top">louiscritchie@gmail.com</a>
+            Do you have one? Let's get in touch: <a href="mailto:louis@louisritchie.com" target="_top">louis@louisritchie.com</a>
           </p>
 
           <p className='sellParagraph'>
