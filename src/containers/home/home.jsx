@@ -18,7 +18,8 @@ class Home extends Component {
           <div className='splashHeading'>
             <h1>Louis Ritchie</h1>
             <h2>Software Developer | Victoria, BC</h2>
-            <h3>B.Sc. Mathematics & Computer Science | Graduating 2019 | 22 months full-time experience</h3>
+            <h3>Full Stack Developer | B.Sc. Math & Comp. Sci. (2019)</h3>
+            <h3>20 months of F/T | 1 year of P/T</h3>
           </div>
         </div>
 
