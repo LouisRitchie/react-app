@@ -37,6 +37,10 @@ function startExpress(port) {
 
   app.use(express.static(PUBLIC_DIR))
 
+  app.get('python-tcp-tutorial-binary-tides.html', function (req, res) {
+    res.sendFile(path.join(PUBLIC_DIR, 'python-tcp-tutorial-binary-tides.html'))
+  })
+
   app.get('(/|/*/)bundle.js', function (req, res) {
     res.sendFile(path.join(DIST_DIR, 'bundle.js'))
   })
