@@ -7,28 +7,6 @@ const prodConfig = require('./webpack/webpack.config.production.js')
 
 let PUBLIC_URL
 
-function startWebpack() {
-  console.log('[WEBPACK] Watching files.')
-
-  const compiler = webpack(process.argv[2] === 'dev'
-    ? { ...config, ...devConfig }
-    : { ...config, ...prodConfig }
-  )
-
-  const watching = compiler.watch({
-    aggregateTimeout: 300,
-    poll: undefined
-  }, (err, stats) => {
-    if (err) {
-      console.log('[WEBPACK] ERROR: ' + err)
-    } else {
-      console.log('[WEBPACK] Finished compiling.')
-      console.log(stats.toString())
-      // do nothing with stats, as it appears to be a big object...
-    }
-  })
-}
-
 function startExpress(port) {
   const app = express()
   const PUBLIC_DIR = path.join(__dirname, 'public')
@@ -61,5 +39,4 @@ function startExpress(port) {
   console.log('[EXPRESS] Listening on port 3000.')
 }
 
-startWebpack()
 startExpress(3000)

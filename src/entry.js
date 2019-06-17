@@ -12,3 +12,10 @@ ReactDOM.render((
     <App />
   </BrowserRouter>
 ), root)
+
+module.exports.default = (
+<BrowserRouter>
+    <App />
+  </BrowserRouter>
+
+)
