@@ -17,6 +17,7 @@ class Header extends Component {
               {route.name}
             </Link>
           ))}
+          <a href="https://blog.louisritchie.com" className="navItem">Blog >>></a>
         </div>
       </div>
     )
