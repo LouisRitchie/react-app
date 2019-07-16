@@ -1,9 +1,8 @@
 {
   covault: {
     heading: 'Covault Technologies',
-    subheading: 'Developer (Full Stack)',
-    description: 'I am one of two developrs building the front end of the Covault application. I have written a majority of the frontend. My senior Ryan Barber covers infrastructure, authentication, and multiplying my effectiveness. I occasionally write Elixir. Covault is a product that connects powersports dealerships to co-op marketing funds maintained by the brands whose products they sell. It provides brands with a way to approve and deny ads that dealerships wish to produce. Finally, it manages media buying campaigns using varied online advertising services.',
-    description: 'I am a developer at Covault Technologies, where I implement features for our co-op advertising platform. I work on multiple codebases: Our Javascript/React frontend, our Elixir/Pheonix backend, and others. I\'m responsible for reliably and consistently shipping code that adds value to our business. I\'m most proud of the many innovative patterns I\'ve pioneered in our codebases that generalize common patterns into small template languages, almost like domain-specific languages. I code in an terse, functional style that reduces lines of code and makes full use of a language\'s features.',
+    subheading: 'Lead Developer (Full Stack)',
+    description: 'I am the lead developer at Covault, and I spearheaded many of the platform\'s features that moved the business forward. I manage multiple codebases: Our Javascript/React frontend, our Elixir/Pheonix backend, and our infrastructure. I\'m responsible for our production app, planning product development, and implementing & releasing features. I\'m most proud of  my ability to quickly deliver crucial features, my strong track record of successful production deployments, and my flexible and innovative code. My code is terse and functional, and makes full use of the language\'s features.',
     times: 'April 2018 - Present',
     disciplines: [
       '_react',
