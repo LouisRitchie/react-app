@@ -8,18 +8,18 @@ class HireMe extends Component {
       <div className='hireme'>
         <img className='hiremeImage' src={require('static/images/myface.jpg')} />
         <div className='hiremeText'>
-          <h2>I'm a programmer with years of experience.</h2>
+          <h2>I'm a full stack programmer with 3 years of experience.</h2>
 
           <p className='sellParagraph'>
-            I've seen a lot of code. I've been in company meetings every week for years.
+            I've deployed a lot of code. I've been in company meetings every week for years.
           </p>
 
           <p className='sellParagraph'>
-            I have been fortunate to have spent a <em>lot</em> of time working on frontends, to have shipped a respectable number of backend features, and to have deployed my share of microservices.
+            I have been fortunate to have spent a <em>lot</em> of time building frontends, to have spearheaded major upgrades to backends, and to have designed my share of systems.
           </p>
 
           <p className='sellParagraph'>
-            My skills in estimation, scheduling, and self-management have had their development cost subsidized by my years working for San Francisco- and Victoria-based companies.
+            I am grateful that my programming skills had their development cost subsidized by my San Fransisco and Victoria employers. Thanks to them, I have been able to make fast progress from when I started my programming career in 2015.
           </p>
 
           <p className='sellParagraph'>
@@ -29,7 +29,7 @@ class HireMe extends Component {
           <h2>Let's get together.</h2>
 
           <p className='sellParagraph'>
-            It's always interesting to talk to an intelligent person.
+            As Smerdyakov said in The Brothers Karamazov: "It's always interesting to talk to an intelligent person."
           </p>
 
           <p className='sellParagraph'>
@@ -37,7 +37,7 @@ class HireMe extends Component {
           </p>
 
           <p className='sellParagraph'>
-            Peruse my old resume if you wish. <a href='http://louisritchie.com/resume.pdf'>Resume (2018)</a>
+            My resume: <a href='http://louisritchie.com/resume.pdf'>Resume (July 2019)</a>
           </p>
         </div>
       </div>
