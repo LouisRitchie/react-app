@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node start.js dev",
-    "start": "node start.js"
+    "start": "node webpack.js && babel-node server.js"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
@@ -26,6 +26,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-transition-group": "^2.2.1",
+    "react-transmit": "^3.2.0",
     "react-vertical-timeline-component": "^2.0.5",
     "responsive-loader": "^1.1.0",
     "rxjs": "^5.5.7",
